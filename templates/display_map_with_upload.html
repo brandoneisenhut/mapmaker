@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Display with Upload</title>
+</head>
+<body>
+    <h1>Upload CSV and View Map</h1>
+    <!-- File Upload Form -->
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    <!-- Embed the map HTML using an iframe. Adjust width and height as needed. -->
+    <iframe src="{{ url_for('serve_map') }}" width="800" height="900" frameborder="0"></iframe></body>
+</html>
