@@ -3,5 +3,4 @@ gunicorn==20.1.0
 pandas
 geopandas
 folium
-glob
 numpy
