@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# But not these files and directories
+!.gitignore
+!app.py
+!data/Chicago/
+!output_map.html
+!display_map_with_upload.html
+!newmapgen.py
+!requirements.txt
+!Procfile
+!runtime.txt
+
+# Specifically include the shapefile, while ignoring other files in the same directory
+!data/tl_2023_17_cousub.shp
+
+# Ignore all other shapefiles and XML files in the data directory
+data/*.shp
+data/*.xml
+
+# Exclude all other directories and files within the data directory, except for the Chicago folder
+data/*
+!data/Chicago/
