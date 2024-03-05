@@ -9,6 +9,9 @@
 !requirements.txt
 !Procfile
 !runtime.txt
+!data/
+!data/Chicago/
+!data/COUSUB/tl_2023_17_cousub.shp
 
 # Include the templates directory and all of its subdirectories
 !templates/
