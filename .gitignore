@@ -1,5 +1,5 @@
 # Ignore everything
-*
+**
 
 # But not these files and directories
 !.gitignore
@@ -21,6 +21,6 @@ data/**/*.shp
 data/**/*.xml
 
 # Ignore everything in the data directory except the COUSUB directory and the Chicago directory
-data/**/*
+ data/**/*
 !data/COUSUB/
 !data/Chicago/
