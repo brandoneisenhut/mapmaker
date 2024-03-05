@@ -51,6 +51,7 @@
             <!-- Place this button where it makes sense in your layout -->
 <button id="regenerateMap">Regenerate Map</button>
             <input type="text" id="filterInput" placeholder="Filter..." value="{{ search_query }}">
+            <button id="searchButton">Search</button>
             <table id="data-table">
                 <thead>
                     <tr>
@@ -127,13 +128,25 @@
 
     <script>
         $(document).ready(function() {
-            $("#filterInput").on("keyup", function() {
-                var value = $(this).val();
+            function performSearch() {
+                var value = $("#filterInput").val();
                 // Redirect to the same page with the search query
                 window.location.href = `?search=${encodeURIComponent(value)}`;
+            }
+    
+            // Trigger search on button click
+            $("#searchButton").click(function() {
+                performSearch();
+            });
+    
+            // Trigger search on pressing enter key in the search input field
+            $("#filterInput").on("keypress", function(e) {
+                if (e.which == 13) { // 13 is the enter key
+                    performSearch();
+                }
             });
         });
-        </script>
+    </script>
     <script>
 $(document).ready(function() {
     $('.save-btn').click(function() {

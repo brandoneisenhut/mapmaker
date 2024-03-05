@@ -4,4 +4,4 @@ pandas
 geopandas
 folium
 numpy
-Werkzeug==0.16.0
+Werkzeug>=2.0
