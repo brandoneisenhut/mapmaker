@@ -1,185 +1,373 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Map Display with Upload</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <title>Surus Illinois Township Coverage</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-                #facts-table {
-            width: 100%; /* Adjust the width as necessary */
-            border-collapse: collapse; /* Collapse borders */
-        }
-        #data-table-container {
-            max-height: 800px; /* Adjust based on your preference */
-            overflow-y: auto; /* Enable vertical scrolling */
-            overflow-x: hidden; /* Hide horizontal scroll */
-        }
-        #facts-table, #facts-table th, #facts-table td {
-            border: 1px solid black; /* Add border to the table, th, and td elements */
-        }
-        #facts-table th, #facts-table td {
-            text-align: center; /* Center-align the text */
-            padding: 8px; /* Add some padding for aesthetics */
-        }
-        .content {
+        #facts-table-container {
+    margin-top: 20px; /* Adds some space between the tables */
+}
+
+#facts-table-container {
+    width: 100%; /* Adjust the width as necessary */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px;
+}
+
+#facts-table, #facts-table th, #facts-table td {
+    border: 1px solid black; /* Add border to the table, th, and td elements */
+}
+
+#facts-table th, #facts-table td {
+    text-align: left; /* Align the text to the left */
+    padding: 8px; /* Add some padding for aesthetics */
+}
+        body {
             display: flex;
-            justify-content: space-between;
+            margin: 0;
+            height: 100vh;
+        }
+        #map-container, #controls-and-table-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         #mapFrame {
-            flex: 1; /* Allows the map to grow and fill the available space */
-            margin-right: 20px; /* Adds some space between the map and the table */
+            flex-grow: 1;
+            width: 100%;
+            border: none;
+        }
+        #controls-container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        #regenerateMap {
+    width: 336px; /* Adjust the width as needed */
+    margin-left:10px;
+}
+#tables-container {
+    display: flex;
+    margin: 10px;
+    flex-direction: column; /* This ensures that children of this container stack vertically */
+}
+        #filter-search-pagination-container {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: start; /* Align items to the start of the container */
+            margin-top: 10px; /* Add some space between this container and the Regenerate Map button */
+            margin-left: 10px;
+        }
+        #filterInput {
+            display: inline-block;
+            width: auto; /* Adjust width as needed */
+            margin-right: 5px; /* Space between filter input and search button */
+        }
+        #searchButton, button[onclick^="previousPage"], button[onclick^="nextPage"] {
+            margin-left: 5px; /* Space between buttons */
+        }
+        #data-table-container {
+            flex-grow: 1;
+            overflow-y: auto; /* Scrollable table */
+            margin: 10px;
         }
         #data-table {
-            flex: 1; /* Allows the table to grow and fill the available space */
-            overflow-x: auto; /* Adds horizontal scrolling to the table if it's too wide */
+            width: 100%;
+            border-collapse: collapse;
+            
+        }
+        #data-table, #data-table th, #data-table td {
+            border: 1px solid black;
+        }
+        #data-table th, #data-table td {
+            text-align: center;
+            padding: 8px;
+        }
+        .temp-message {
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 0.9em;
+            text-align: center;
+            width: auto;
+            display: inline-block;
+        }
+        .temp-message.success {
+            background-color: #4CAF50;
+        }
+        .temp-message.error {
+            background-color: #f44336;
+        }
+        /* Adjustments for buttons */
+        .control-row button {
+            margin: 0 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Surus Illinois Township Coverage</h1>
+    <div id="map-container">
+        <iframe id="mapFrame" src="{{ url_for('output_map') }}" style="height: 100%;"></iframe>
+    </div>
+    <div id="controls-and-table-container">
+        <div id="controls-container">
+    <div id="regenerateMap-container">
+        <button id="regenerateMap">Regenerate Map</button>
+    </div>
+    <div id="filter-search-pagination-container">
+        <input type="text" id="filterInput" placeholder="Filter...">
+        <button id="searchButton">Search</button>
+        <button onclick="previousPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+</div>
+<div id="tables-container">
 
-
-    <div class="content">
-        <!-- Embed the map HTML using an iframe. Adjust width and height as needed. -->
-        <iframe id="mapFrame" src="{{ url_for('serve_map') }}" width="400" height="900" frameborder="0"></iframe>
-        
         <div id="data-table-container">
-            <!-- Place this button where it makes sense in your layout -->
-<button id="regenerateMap">Regenerate Map</button>
-            <input type="text" id="filterInput" placeholder="Filter..." value="{{ search_query }}">
-            <button id="searchButton">Search</button>
+            <!-- Table and its content here -->
             <table id="data-table">
-                <thead>
-                    <tr>
-                        <th>Township</th>
-                        <th>County</th>
-                        <th>Label</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for row in data %}
-                    <tr>
-                        <td>{{ row['NAMELSAD'] }}</td>
-                        <td>{{ row['Place Name'] }}</td>
-                        <td>
-                            <select class="label-select" data-row-id="{{ row['COUSUBFP'] }}">
-                                <option value="nan" {% if row['Label'] == 'nan' %}selected{% endif %}>nan</option>
-                                <option value="In the Pipeline" {% if row['Label'] == 'In the Pipeline' %}selected{% endif %}>In the Pipeline</option>
-                                <option value="Current Clients" {% if row['Label'] == 'Current Clients' %}selected{% endif %}>Current Client</option>
-                            </select>
-                        </td>
-                        <td><button class="save-btn" data-row-id="{{ row['COUSUBFP'] }}">Save</button></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <div>
-                <!-- Previous Button -->
-                {% if page > 1 %}
-                <a href="?page={{ page - 1 }}&sort={{ sort_by }}&direction={{ sort_direction }}">Previous</a>
+            <thead>
+                <tr>
+                    <th>Township</th>
+                    <th>County</th>
+                    <th>Label</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row['township_name'] }}</td>
+                    <td>{{ row['county_name'] }}</td>
+                    <td>
+                        <select class="label-select" data-row-id="{{ row['id'] }}">
+                            <option value="nan" {% if row['label'] == 'nan' %}selected{% endif %}>nan</option>
+                            <option value="In the Pipeline" {% if row['label'] == 'In the Pipeline' %}selected{% endif %}>In the Pipeline</option>
+                            <option value="Current Clients" {% if row['label'] == 'Current Clients' %}selected{% endif %}>Current Clients</option>
+                        </select>
+                    </td>
+                    <td><button class="save-btn" data-row-id="{{ row['id'] }}">Save</button></td>
+                </tr>
                 {% else %}
-                <span>Previous</span>
-                {% endif %}
+                <tr>
+                    <td colspan="3">No data found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
 
-                <!-- Next Button -->
-                {% if page < total_pages %}
-                <a href="?page={{ page + 1 }}&sort={{ sort_by }}&direction={{ sort_direction }}">Next</a>
-                {% else %}
-                <span>Next</span>
-                {% endif %}
-            </div>
-            
-</table> <!-- This is the closing tag of your existing data table -->
-
+    <!-- Facts Table -->
 <div id="facts-table-container">
     <table id="facts-table">
         <thead>
             <tr>
                 <th>Fact</th>
-                <th>Value</th>
+                <th>Count</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>In the Pipeline Count</td>
+                <td>Pipeline Projects</td>
                 <td>{{ pipeline_count }}</td>
             </tr>
             <tr>
-                <td>Current Client Count</td>
+                <td>Current Clients</td>
                 <td>{{ client_count }}</td>
             </tr>
             <tr>
-                <td>NaN Count</td>
+                <td>Other Categories</td>
                 <td>{{ nan_count }}</td>
             </tr>
             <tr>
-                <td>Last Updated</td>
-                <td>{{ last_updated }}</td>
+                <td>Unique Counties</td>
+                <td>{{ unique_counties }}</td>
+            </tr>
+            <tr>
+                <td>Unique Townships</td>
+                <td>{{ unique_townships }}</td>
+            </tr>
+            <tr>
+                <td>Unique Labels</td>
+                <td>{{ unique_labels }}</td>
             </tr>
         </tbody>
     </table>
 </div>
-        </div>
-    </div>
-
+</div>
     <script>
         $(document).ready(function() {
-            function performSearch() {
-                var value = $("#filterInput").val();
-                // Redirect to the same page with the search query
-                window.location.href = `?search=${encodeURIComponent(value)}`;
+            let currentPage = 1; // Declare currentPage at the start of the document.ready function
+            
+                    // Define nextPage and previousPage functions
+        function nextPage() {
+            currentPage += 1;
+            fetchData(currentPage);
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                fetchData(currentPage);
             }
-    
-            // Trigger search on button click
-            $("#searchButton").click(function() {
-                performSearch();
-            });
-    
-            // Trigger search on pressing enter key in the search input field
+        }
+
+        // Attach nextPage and previousPage to the window object to make them globally accessible
+        window.nextPage = nextPage;
+        window.previousPage = previousPage;
+
+        $("#searchButton").click(function(e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+    var value = $("#filterInput").val();
+    currentPage = 1; // Reset to the first page
+    fetchData(currentPage, value); // Fetch data with the filter applied
+});
+
             $("#filterInput").on("keypress", function(e) {
-                if (e.which == 13) { // 13 is the enter key
-                    performSearch();
+                if (e.which == 13) { // Enter key pressed
+                    e.preventDefault(); // Prevent the default action to avoid reloading the page
+                    var value = $(this).val();
+                    currentPage = 1; // Reset to the first page
+                    fetchData(currentPage, value); // Fetch data with the filter applied
                 }
             });
-        });
-    </script>
-    <script>
-$(document).ready(function() {
-    $('.save-btn').click(function() {
-        var cousubfp = $(this).data('row-id'); // This now holds the COUSUBFP value
-        console.log(cousubfp); // Debugging: Log the COUSUBFP to ensure it's being retrieved correctly
-        var selectedLabel = $(`.label-select[data-row-id='${cousubfp}']`).val();
-        
-        // Proceed with the AJAX request
-        $.ajax({
-            url: '/save-label',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({ cousubfp: cousubfp, label: selectedLabel }), // Send COUSUBFP as part of the request
-            success: function(response) {
-                console.log('Label saved successfully');
-            },
-            error: function(error) {
-                console.log('Error saving label');
-            }
-        });
-    });
-});
-        </script>
-        <script>
-            document.getElementById('regenerateMap').addEventListener('click', function() {
-                // Send a request to the Flask route
+
+            $('.save-btn').click(function() {
+                var id = $(this).data('row-id');
+                var selectedLabel = $(`.label-select[data-row-id='${id}']`).val();
+                var $thisButton = $(this); // Reference to the clicked button
+                
+                $.ajax({
+                    url: '/save-label',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ id: id, label: selectedLabel }),
+                    success: function(response) {
+                        console.log('Label saved successfully');
+                        // Display a temporary success message
+                        showTemporaryMessage($thisButton, "Label saved successfully", "success");
+                    },
+                    error: function(error) {
+                        console.log('Error saving label');
+                        // Display a temporary error message
+                        showTemporaryMessage($thisButton, "Error saving label", "error");
+                    }
+                });
+            });
+
+            $('#regenerateMap').click(function() {
                 fetch('/regenerate-map')
-                    .then(response => {
-                        if (response.ok) {
-                            // If the map was regenerated successfully, reload the page to show the new map
-                            window.location.reload();
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message === 'Map regenerated successfully') {
+                            var iframe = document.getElementById('mapFrame');
+                            var src = iframe.src;
+                            var timestamp = new Date().getTime();
+                            iframe.src = src.split('?')[0] + '?t=' + timestamp;
                         } else {
-                            alert('Failed to regenerate the map.');
+                            console.error('Failed to regenerate the map.');
                         }
                     })
                     .catch(error => console.error('Error:', error));
             });
-            </script>
+
+            function showTemporaryMessage($element, message, type) {
+                var $messageDiv = $('<div class="temp-message ' + type + '">' + message + '</div>');
+                $element.closest('td').append($messageDiv); // Append the message near the button
+                setTimeout(function() {
+                    $messageDiv.fadeOut(500, function() { $(this).remove(); });
+                }, 3000); // Remove the message after 3 seconds
+            }
+
+            function fetchData(page, filterValue = '') {
+                let url = `/get-data?page=${page}`;
+                if (filterValue) {
+                    url += `&search=${encodeURIComponent(filterValue)}`;
+                }
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        updateTableWithNewData(data);
+                        currentPage = page; // Update the current page
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function nextPage() {
+                currentPage += 1; // Increment current page
+                fetchData(currentPage); // Fetch data for the next page
+            }
+
+            function previousPage() {
+                if (currentPage > 1) {
+                    currentPage -= 1; // Decrement current page if greater than 1
+                    fetchData(currentPage); // Fetch data for the previous page
+                }
+            }
+
+            function updateTableWithNewData(data) {
+                const tableBody = document.querySelector('#data-table tbody');
+                tableBody.innerHTML = ''; // Clear existing table rows
+
+                // Create new rows from fetched data
+                data.forEach(rowData => {
+                    const tr = document.createElement('tr');
+                    const labelDropdownHtml = `
+                        <select class="label-select" data-row-id="${rowData.id}">
+                            <option value="nan" ${rowData.label === 'nan' ? 'selected' : ''}>nan</option>
+                            <option value="In the Pipeline" ${rowData.label === 'In the Pipeline' ? 'selected' : ''}>In the Pipeline</option>
+                            <option value="Current Clients" ${rowData.label === 'Current Clients' ? 'selected' : ''}>Current Clients</option>
+                        </select>
+                    `;
+                    const saveButtonHtml = `<button class="save-btn" data-row-id="${rowData.id}">Save</button>`;
+
+                    tr.innerHTML = `
+                        <td>${rowData.township_name}</td>
+                        <td>${rowData.county_name}</td>
+                        <td>${labelDropdownHtml}</td>
+                        <td>${saveButtonHtml}</td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+
+                // Reattach event listeners to the new save buttons
+                attachSaveButtonEventListeners();
+            }
+
+            function attachSaveButtonEventListeners() {
+                document.querySelectorAll('.save-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        var id = this.dataset.rowId;
+                        var selectedLabel = document.querySelector(`.label-select[data-row-id='${id}']`).value;
+                        var $thisButton = $(this); // Reference to the clicked button
+
+                        $.ajax({
+                            url: '/save-label',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: JSON.stringify({ id: id, label: selectedLabel }),
+                            success: function(response) {
+                                console.log('Label saved successfully');
+                                // Display a temporary success message
+                                showTemporaryMessage($thisButton, "Label saved successfully", "success");
+                            },
+                            error: function(error) {
+                                console.log('Error saving label');
+                                // Display a temporary error message
+                                showTemporaryMessage($thisButton, "Error saving label", "error");
+                            }
+                        });
+                    });
+                });
+            }
+
+            // Call this function once at the end of the $(document).ready() to attach the event listeners initially
+            attachSaveButtonEventListeners();
+
+            // Initial fetch
+            fetchData(currentPage, '');
+        });
+    </script>
 </body>
 </html>

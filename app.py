@@ -1,117 +1,157 @@
-from flask import Flask, request, send_file, jsonify, render_template, redirect, url_for, send_from_directory
-import os
-import pandas as pd
-from werkzeug.utils import secure_filename
-from newmapgen import create_folium_map_new_csv
-import os
-from datetime import datetime
+from flask import Flask, request, jsonify, render_template, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 import subprocess
+from datetime import datetime
+from sqlalchemy import create_engine
+import pandas as pd
+import os
+from config import DATABASE_CONFIG
+import logging
+from sqlalchemy import text
+from newmapgen import create_folium_map_from_db
+
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{DATABASE_CONFIG['user']}:{DATABASE_CONFIG['password']}@{DATABASE_CONFIG['host']}:{DATABASE_CONFIG['port']}/{DATABASE_CONFIG['database']}"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-UPLOAD_FOLDER = 'uploads'
-PROCESSED_FOLDER = 'processed'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-os.makedirs(PROCESSED_FOLDER, exist_ok=True)
-
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-@app.route('/', methods=['GET', 'POST'])
-def upload_file():
-    # Initialize data variable outside of the try block
-    data = []
-    search_query = request.args.get('search', '')  # Get the search query from request arguments
+@app.route('/', methods=['GET'])
+def display_data():
+    search_query = request.args.get('search', '')
     page = request.args.get('page', 1, type=int)
-    rows_per_page = 20
+    rows_per_page = 10
 
-    if request.method == 'POST':
-        # Handle file upload
-        if 'file' not in request.files:
-            return 'No file part'
-        file = request.files['file']
-        if file.filename == '':
-            return 'No selected file'
-        if file:
-            filename = secure_filename(file.filename)
-            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            file.save(filepath)
-            
-            # Process the file
-            processed_csv_path = process_with_fips(filepath)
-            shapefile_directory = 'data/COUSUB'
-            output_html = 'output_map.html'
-            final_output_path = create_folium_map_new_csv(processed_csv_path, output_html)
-            
-            # Redirect to refresh the page and show the updated map
-            return redirect(url_for('upload_file'))
+    # Fetch data from the database
+    df = fetch_data_from_database(search_query=search_query, page=page, rows_per_page=rows_per_page)
+    data = df.to_dict('records')
 
-    # Attempt to load the CSV file for the table data
-    try:
-        df = pd.read_csv('data/final_cousubfp_nameslad_place_label.csv')
-        if search_query:
-            # Assuming you want to search across multiple columns, adjust as necessary
-            df = df[df.apply(lambda row: row.astype(str).str.contains(search_query, case=False, regex=False).any(), axis=1)]
-        data = df.to_dict(orient='records')
-        total_rows = len(data)
-        total_pages = (total_rows + rows_per_page - 1) // rows_per_page  # Ceiling division
-        start = (page - 1) * rows_per_page
-        end = start + rows_per_page
-        data = data[start:end]  # Slice the data for the current page
-        
-        # Calculate counts
-        pipeline_count = (df['Label'] == 'In the Pipeline').sum()
-        client_count = (df['Label'] == 'Current Clients').sum()
-        nan_count = df['Label'].isna().sum()  # Correct way to count NaN values
-        
-        # Get last updated time of the CSV file
-        last_updated_timestamp = os.path.getmtime('data/final_cousubfp_nameslad_place_label.csv')
-        last_updated = datetime.fromtimestamp(last_updated_timestamp).strftime('%Y-%m-%d %H:%M:%S')
-    except Exception as e:
-        # Handle the case where the CSV file cannot be loaded
-        print(f"Error loading CSV: {e}")
+    pipeline_count, client_count, nan_count, unique_counties, unique_townships, unique_labels = calculate_counts_and_last_updated()
 
-    print(data)  # Add this line before returning render_template in your Flask route
-    return render_template('display_map_with_upload.html', map_url='output_map.html', data=data, page=page, total_pages=total_pages, search_query=search_query, pipeline_count=pipeline_count, client_count=client_count, nan_count=nan_count, last_updated=last_updated)
+    # Get the total number of records matching the search query
+    total_data_count = get_total_records_count(search_query=search_query)
+    total_pages = (total_data_count + rows_per_page - 1) // rows_per_page
 
-@app.route('/map')
-def serve_map():
-    return send_from_directory('.', 'output_map.html')
+    return render_template('display_map_with_upload.html',  
+                           pipeline_count=pipeline_count, 
+                           client_count=client_count, 
+                           nan_count=nan_count, 
+                           unique_counties=unique_counties, 
+                           unique_townships=unique_townships, 
+                           unique_labels=unique_labels)
 
-@app.route('/data')
+@app.route('/get-data', methods=['GET'])
 def get_data():
-    df = pd.read_csv('data/final_cousubfp_nameslad_place_label.csv')
-    data = df.to_dict(orient='records')
+    page = request.args.get('page', 1, type=int)
+    rows_per_page = 10  # Define how many rows per page you want
+    search_query = request.args.get('search', '')  # Optional: if you have a search feature
+
+    # Fetch paginated data from the database
+    paginated_data = fetch_data_from_database(search_query=search_query, page=page, rows_per_page=rows_per_page)
+    data = paginated_data.to_dict('records')  # Convert the DataFrame to a list of dictionaries
+
     return jsonify(data)
 
 @app.route('/save-label', methods=['POST'])
 def save_label():
     data = request.json
-    cousubfp = data['cousubfp']  # Use COUSUBFP to identify the row
+    cousubfp = data['id']
     new_label = data['label']
     
-    # Load your CSV
-    df = pd.read_csv('data/final_cousubfp_nameslad_place_label.csv')
-    
-    # Update the label for the row identified by COUSUBFP
-    df.loc[df['COUSUBFP'] == cousubfp, 'Label'] = new_label
-    
-    # Save the updated CSV
-    df.to_csv('data/final_cousubfp_nameslad_place_label.csv', index=False)
+    # Assuming update_label_in_database() is defined elsewhere in your codebase
+    update_label_in_database(cousubfp, new_label)
     
     return jsonify({'message': 'Label updated successfully'})
 
-@app.route('/regenerate-map')
+@app.route('/regenerate-map', methods=['GET'])
 def regenerate_map():
-    csv_file_path = 'data/final_cousubfp_nameslad_place_label.csv'
-    # Adjust the command to include the path to the CSV file as an argument
-    result = subprocess.run(['python', 'newmapgen.py', csv_file_path], capture_output=True, text=True)
+    try:
+        # Call the function from newmapgen.py that generates the map
+        create_folium_map_from_db()
+        return jsonify({'message': 'Map regenerated successfully'}), 200
+    except Exception as e:
+        print(f"Error regenerating map: {e}")
+        return jsonify({'message': 'Failed to regenerate the map'}), 500
+
+def calculate_counts_and_last_updated():
+    # Count of 'In the Pipeline' labels
+    pipeline_count_query = text("SELECT COUNT(*) FROM townships WHERE label = 'In the Pipeline';")
+    pipeline_count = db.session.execute(pipeline_count_query).scalar()
     
-    if result.returncode == 0:
-        print("Map regenerated successfully.")
-    else:
-        print("Error regenerating map:", result.stderr)
+    # Count of 'Current Clients' labels
+    client_count_query = text("SELECT COUNT(*) FROM townships WHERE label = 'Current Clients';")
+    client_count = db.session.execute(client_count_query).scalar()
     
-    return redirect(url_for('upload_file'))
+    # Count of labels not in ['In the Pipeline', 'Current Clients']
+    nan_count_query = text("SELECT COUNT(*) FROM townships WHERE label NOT IN ('In the Pipeline', 'Current Clients');")
+    nan_count = db.session.execute(nan_count_query).scalar()
+    
+    # Count of unique county names
+    unique_counties_query = text("SELECT COUNT(DISTINCT county_name) FROM townships;")
+    unique_counties = db.session.execute(unique_counties_query).scalar()
+    
+    # Count of unique township names
+    unique_townships_query = text("SELECT COUNT(DISTINCT township_name) FROM townships;")
+    unique_townships = db.session.execute(unique_townships_query).scalar()
+    
+    # Count of unique labels
+    unique_labels_query = text("SELECT COUNT(DISTINCT label) FROM townships;")
+    unique_labels = db.session.execute(unique_labels_query).scalar()
+
+    return pipeline_count, client_count, nan_count, unique_counties, unique_townships, unique_labels
+
+def update_label_in_database(id, new_label):
+    try:
+        # Use the primary key 'id' in your WHERE clause to identify the correct row to update
+        update_query = text("UPDATE townships SET label = :new_label WHERE id = :id;")
+        db.session.execute(update_query, {'new_label': new_label, 'id': id})
+        db.session.commit()
+        return True
+    except Exception as e:
+        print(f"Error updating database: {e}")
+        db.session.rollback()
+        return False
+    
+def get_total_records_count(search_query=''):
+    query = text("SELECT COUNT(*) FROM townships WHERE township_name ILIKE :search_query;")
+    result = db.session.execute(query, {'search_query': f'%{search_query}%'})
+    total_count = result.scalar()
+    return total_count
+
+
+def fetch_data_from_database(search_query='', page=1, rows_per_page=10):
+    offset = (page - 1) * rows_per_page
+    search_filter = f"%{search_query}%" if search_query else "%"
+    query = text("""
+        SELECT * FROM townships
+        WHERE township_name ILIKE :search_filter
+        ORDER BY id
+        LIMIT :rows_per_page OFFSET :offset;
+    """)
+    result = db.session.execute(query, {
+        'search_filter': search_filter,
+        'rows_per_page': rows_per_page,
+        'offset': offset
+    })
+    df = pd.DataFrame(result.fetchall())
+    df.columns = result.keys()
+    return df
+
+def generate_connection_url():
+    """Generates a PostgreSQL connection URL from the database configuration."""
+    user = DATABASE_CONFIG['user']
+    password = DATABASE_CONFIG['password']
+    host = DATABASE_CONFIG['host']
+    port = DATABASE_CONFIG['port']
+    database = DATABASE_CONFIG['database']
+    connection_url = f"postgresql://{user}:{password}@{host}:{port}/{database}"
+    return connection_url
+
+@app.route('/output-map')
+def output_map():
+    return app.send_static_file('output_map.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -3,21 +3,52 @@ import pandas as pd
 import folium
 from folium import FeatureGroup
 import logging
+import psycopg2
+from config import DATABASE_CONFIG
+from sqlalchemy import create_engine
 
-def create_folium_map_new_csv(processed_csv_path, output_html='static/maps/output_map_new.html'):
+def generate_connection_url():
+    """Generates a PostgreSQL connection URL from the database configuration."""
+    user = DATABASE_CONFIG['user']
+    password = DATABASE_CONFIG['password']
+    host = DATABASE_CONFIG['host']
+    port = DATABASE_CONFIG['port']
+    database = DATABASE_CONFIG['database']
+    connection_url = f"postgresql://{user}:{password}@{host}:{port}/{database}"
+    return connection_url
+
+def fetch_data_from_database():
+    """Fetches township data from the database using SQLAlchemy."""
+    try:
+        # Construct the database URI
+        database_uri = generate_connection_url()
+        # Create an SQLAlchemy engine
+        engine = create_engine(database_uri)
+        query = "SELECT id, township_name, label FROM townships;"
+        township_df = pd.read_sql_query(query, engine)
+        return township_df
+    except Exception as error:
+        logging.error(f"Error fetching data from database: {error}")
+        return pd.DataFrame()  # Return an empty DataFrame on error
+
+
+def create_folium_map_from_db(output_html='static/output_map.html'):
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
     # Directly load the specific shapefile for Illinois
     shapefile_path = 'data/COUSUB/tl_2023_17_cousub.shp'
     gdf = gpd.read_file(shapefile_path)
 
-    # Load the new CSV
-    township_df = pd.read_csv(processed_csv_path)
+    # Fetch data from the database
+    township_df = fetch_data_from_database()
+    if township_df.empty:
+        logging.warning("No data fetched from the database or an error occurred.")
+        return
+
     # Ensure the column used for matching is correctly formatted
-    # This step assumes your CSV has a matching column for COUSUBFP. Adjust as necessary.
-    township_df['COUSUBFP'] = township_df['COUSUBFP'].astype(str).apply(lambda x: x.zfill(5))
-    # Merge the GeoDataFrame with the new CSV data using COUSUBFP
-    merged_gdf = gdf.merge(township_df, left_on='COUSUBFP', right_on='COUSUBFP', how='inner')
+    township_df['id'] = township_df['id'].astype(str).apply(lambda x: x.zfill(5))
+    # Merge the GeoDataFrame with the database data using cousubfp
+    merged_gdf = gdf.merge(township_df, left_on='COUSUBFP', right_on='id', how='inner')
 
     if not merged_gdf.empty:
         logging.debug("Merged GeoDataFrame is not empty. Proceeding with map generation.")
@@ -26,26 +57,26 @@ def create_folium_map_new_csv(processed_csv_path, output_html='static/maps/outpu
         m = folium.Map(location=initial_location, zoom_start=initial_zoom_level)
 
         # Define the geographical bounds of Illinois
-        illinois_bounds = [[36.970298, -91.513079], [42.508338, -87.019935]]  # These are approximate and may need adjustment
+        illinois_bounds = [[36.970298, -91.513079], [42.508338, -87.019935]]
 
         # Apply the bounds to the map
         m.fit_bounds(illinois_bounds)
-        m.options['minZoom'] = 7  # Adjust as needed to prevent zooming out too far
+        m.options['minZoom'] = 7
         m.options['maxBounds'] = illinois_bounds
-        m.options['maxBoundsViscosity'] = 1.0  # Makes it harder to pan outside the bounds
+        m.options['maxBoundsViscosity'] = 1.0
 
         feature_group = FeatureGroup(name='Illinois').add_to(m)
         
         folium.GeoJson(
             merged_gdf,
             style_function=lambda feature: {
-                'fillColor': '#FF0000' if feature['properties']['Label'] == 'Current Clients' else '#929292' if feature['properties']['Label'] == 'In the Pipeline' else '#000000',
+                'fillColor': '#FF0000' if feature['properties']['label'] == 'Current Clients' else '#929292' if feature['properties']['label'] == 'In the Pipeline' else '#000000',
                 'color': 'black',
                 'fillOpacity': 0.75,
                 'weight': 1
             },
             tooltip=folium.GeoJsonTooltip(
-                fields=['NAME', 'COUSUBFP', 'Label'],
+                fields=['township_name', 'id', 'label'],
                 aliases=['Township Name:', 'COUSUBFP:', 'Label:'],
                 localize=True
             )
@@ -59,5 +90,5 @@ def create_folium_map_new_csv(processed_csv_path, output_html='static/maps/outpu
 if __name__ == '__main__':
     # Example usage
     processed_csv_path = 'data/final_cousubfp_nameslad_place_label.csv'  # Update this path to your new CSV file
-    output_html = 'output_map.html'  # Update this path to where you want to save the output HTML
-    create_folium_map_new_csv(processed_csv_path, output_html)
+    output_html = 'static/output_map.html'  # Update this path to where you want to save the output HTML
+    create_folium_map_from_db(output_html=output_html)
