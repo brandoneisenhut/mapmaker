@@ -6,3 +6,4 @@ Jinja2==3.0.1
 folium
 numpy
 geopandas == 0.14.2
+flask_sqlalchemy
