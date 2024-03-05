@@ -7,3 +7,4 @@ folium
 numpy
 geopandas == 0.14.2
 flask_sqlalchemy
+psycopg2
