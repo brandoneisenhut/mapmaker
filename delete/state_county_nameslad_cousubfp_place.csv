@@ -1,0 +1,1697 @@
+STATEFP,COUNTYFP,NAMELSAD,COUSUBFP,Place Name,Place Type
+17,173,Prairie township,61522,Shelby County,County
+17,173,Richland township,63615,Shelby County,County
+17,173,Ridge township,63836,Shelby County,County
+17,173,Rose township,65637,Shelby County,County
+17,173,Rural township,66313,Shelby County,County
+17,033,Oblong township,55119,Crawford County,County
+17,033,Prairie township,61470,Crawford County,County
+17,033,Martin township,47202,Crawford County,County
+17,173,Shelbyville township,69199,Shelby County,County
+17,173,Sigel township,69927,Shelby County,County
+17,173,Tower Hill township,75861,Shelby County,County
+17,139,Marrowbone township,47124,Moultrie County,County
+17,133,Precinct 12,92605,Monroe County,County
+17,139,Lovington township,45057,Moultrie County,County
+17,143,Peoria City township,59013,Peoria County,County
+17,139,Whitley township,81451,Moultrie County,County
+17,167,Auburn township,02928,Sangamon County,County
+17,167,Ball township,03506,Sangamon County,County
+17,167,Buffalo Hart township,09486,Sangamon County,County
+17,167,Capital township,11046,Sangamon County,County
+17,167,Cartwright township,11579,Sangamon County,County
+17,167,Chatham township,12697,Sangamon County,County
+17,167,Cooper township,16223,Sangamon County,County
+17,167,Lanesville township,41976,Sangamon County,County
+17,167,Divernon township,20058,Sangamon County,County
+17,167,Island Grove township,37881,Sangamon County,County
+17,167,Loami township,44186,Sangamon County,County
+17,167,Maxwell township,47618,Sangamon County,County
+17,167,Mechanicsburg township,48034,Sangamon County,County
+17,167,New Berlin township,52181,Sangamon County,County
+17,167,Springfield township,72013,Sangamon County,County
+17,167,Talkington township,74340,Sangamon County,County
+17,167,Williams township,81776,Sangamon County,County
+17,167,Woodside township,83310,Sangamon County,County
+17,167,Illiopolis township,37140,Sangamon County,County
+17,167,Rochester township,64772,Sangamon County,County
+17,187,Point Pleasant township,60898,Warren County,County
+17,187,Sumner township,73716,Warren County,County
+17,187,Tompkins township,75692,Warren County,County
+17,049,Bishop township,06145,Effingham County,County
+17,049,Douglas township,20474,Effingham County,County
+17,049,Jackson township,38063,Effingham County,County
+17,049,Lucas township,45161,Effingham County,County
+17,049,Mason township,47462,Effingham County,County
+17,049,Moccasin township,49763,Effingham County,County
+17,049,Mound township,50725,Effingham County,County
+17,049,St. Francis township,66807,Effingham County,County
+17,049,Summit township,73651,Effingham County,County
+17,049,Teutopolis township,74756,Effingham County,County
+17,049,Union township,76654,Effingham County,County
+17,049,Watson township,79254,Effingham County,County
+17,203,Kansas township,39012,Woodford County,County
+17,049,Liberty township,43159,Effingham County,County
+17,195,Clyde township,15144,Whiteside County,County
+17,195,Jordan township,38700,Whiteside County,County
+17,017,Chandlerville township,12463,Cass County,County
+17,017,Sangamon Valley township,67600,Cass County,County
+17,027,Santa Fe township,67652,Clinton County,County
+17,057,Cass township,11696,Fulton County,County
+17,075,Stockland township,72773,Iroquois County,County
+17,079,Crooked Creek township,17653,Jasper County,County
+17,061,Roodhouse township,65494,Greene County,County
+17,067,Durham township,21306,Hancock County,County
+17,061,Rubicon township,66235,Greene County,County
+17,163,Canteen township,10968,St. Clair County,County
+17,163,Engelmann township,24205,St. Clair County,County
+17,163,Freeburg township,27819,St. Clair County,County
+17,163,Lebanon township,42509,St. Clair County,County
+17,061,Wrights township,83583,Greene County,County
+17,163,Marissa township,46968,St. Clair County,County
+17,127,Washington precinct,93618,Massac County,County
+17,009,Lee township,42561,Brown County,County
+17,009,Missouri township,49685,Brown County,County
+17,009,Mount Sterling township,51167,Brown County,County
+17,023,Darwin township,18680,Clark County,County
+17,131,Mercer township,48398,Mercer County,County
+17,131,Millersburg township,49256,Mercer County,County
+17,131,New Boston township,52233,Mercer County,County
+17,131,Ohio Grove township,55405,Mercer County,County
+17,131,Perryton township,59182,Mercer County,County
+17,131,Preemption township,61795,Mercer County,County
+17,009,Pea Ridge township,58330,Brown County,County
+17,009,Versailles township,77733,Brown County,County
+17,187,Berwick township,05560,Warren County,County
+17,023,Dolson township,20279,Clark County,County
+17,023,Johnson township,38505,Clark County,County
+17,023,Marshall township,47176,Clark County,County
+17,023,Martinsville township,47267,Clark County,County
+17,067,Bear Creek township,04338,Hancock County,County
+17,067,Hancock township,32629,Hancock County,County
+17,067,Prairie township,61496,Hancock County,County
+17,067,St. Albans township,66612,Hancock County,County
+17,067,Walker township,78422,Hancock County,County
+17,067,Wythe township,83713,Hancock County,County
+17,067,La Harpe township,40845,Hancock County,County
+17,157,Walsh precinct,93600,Randolph County,County
+17,055,Frankfort township,27611,Franklin County,County
+17,029,Humboldt township,36555,Coles County,County
+17,029,Lafayette township,40637,Coles County,County
+17,029,Mattoon township,47566,Coles County,County
+17,029,North Okaw township,54014,Coles County,County
+17,053,Brenton township,07978,Ford County,County
+17,163,New Athens township,52129,St. Clair County,County
+17,163,Prairie Du Long township,61600,St. Clair County,County
+17,163,Lenzburg township,42873,St. Clair County,County
+17,163,East St. Louis township,22268,St. Clair County,County
+17,053,Button township,10214,Ford County,County
+17,053,Dix township,20110,Ford County,County
+17,053,Mona township,49919,Ford County,County
+17,053,Patton township,58122,Ford County,County
+17,127,Metropolis No. 4 precinct,92124,Massac County,County
+17,123,Bell Plain township,04949,Marshall County,County
+17,077,Carbondale township,11170,Jackson County,County
+17,077,Degognia township,19148,Jackson County,County
+17,077,Makanda township,46227,Jackson County,County
+17,055,Barren township,03818,Franklin County,County
+17,131,Rivoli township,64551,Mercer County,County
+17,131,Suez township,73339,Mercer County,County
+17,131,Richland Grove township,63628,Mercer County,County
+17,027,St. Rose township,67171,Clinton County,County
+17,097,Shields township,69485,Lake County,County
+17,097,Wauconda township,79280,Lake County,County
+17,097,Waukegan township,79306,Lake County,County
+17,097,West Deerfield township,80112,Lake County,County
+17,097,County subdivisions not defined,00000,Lake County,County
+17,097,Fremont township,27923,Lake County,County
+17,025,Louisville township,44940,Clay County,County
+17,029,Paradise township,57615,Coles County,County
+17,023,Melrose township,48229,Clark County,County
+17,023,Parker township,57667,Clark County,County
+17,023,Wabash township,78279,Clark County,County
+17,023,York township,83934,Clark County,County
+17,029,Seven Hickory township,68718,Coles County,County
+17,047,Bone Gap precinct,90486,Edwards County,County
+17,047,Ellery precinct,91152,Edwards County,County
+17,047,Salem No. 2 precinct,93084,Edwards County,County
+17,053,Peach Orchard township,58317,Ford County,County
+17,053,Pella township,58512,Ford County,County
+17,053,Rogers township,65273,Ford County,County
+17,053,Sullivant township,73521,Ford County,County
+17,053,Wall township,78474,Ford County,County
+17,055,Ewing township,24686,Franklin County,County
+17,055,Six Mile township,70070,Franklin County,County
+17,055,Cave township,11813,Franklin County,County
+17,097,Antioch township,01608,Lake County,County
+17,097,Avon township,03220,Lake County,County
+17,097,Cuba township,18004,Lake County,County
+17,097,Grant township,30952,Lake County,County
+17,083,Ruyle township,66482,Jersey County,County
+17,093,Kendall township,39454,Kendall County,County
+17,093,Oswego township,56900,Kendall County,County
+17,027,Breese township,07926,Clinton County,County
+17,027,Brookside township,08732,Clinton County,County
+17,027,East Fork township,21748,Clinton County,County
+17,027,Irishtown township,37673,Clinton County,County
+17,091,Salina township,67262,Kankakee County,County
+17,091,Yellowhead township,83856,Kankakee County,County
+17,135,Grisham township,31836,Montgomery County,County
+17,135,Harvel township,33370,Montgomery County,County
+17,021,Assumption township,02622,Christian County,County
+17,021,Bear Creek township,04325,Christian County,County
+17,097,Lake Villa township,41599,Lake County,County
+17,021,Buckhart township,09239,Christian County,County
+17,021,Greenwood township,31641,Christian County,County
+17,129,Athens North No. 2 precinct,90256,Menard County,County
+17,129,Athens South No. 1 precinct,90262,Menard County,County
+17,097,Libertyville township,43263,Lake County,County
+17,097,Newport township,52753,Lake County,County
+17,055,Browning township,08940,Franklin County,County
+17,027,Wade township,78344,Clinton County,County
+17,027,Wheatfield township,80996,Clinton County,County
+17,027,Germantown township,29054,Clinton County,County
+17,027,Looking Glass township,44667,Clinton County,County
+17,061,Carrollton township,11475,Greene County,County
+17,061,Patterson township,58096,Greene County,County
+17,061,Woodville township,83401,Greene County,County
+17,047,Dixon precinct,90954,Edwards County,County
+17,047,Shelby No. 1 precinct,93153,Edwards County,County
+17,135,Hillsboro township,35060,Montgomery County,County
+17,135,Pitman township,60183,Montgomery County,County
+17,135,South Litchfield township,70928,Montgomery County,County
+17,135,Walshville township,78669,Montgomery County,County
+17,097,Benton township,05326,Lake County,County
+17,097,Ela township,22853,Lake County,County
+17,021,Johnson township,38492,Christian County,County
+17,021,Mosquito township,50686,Christian County,County
+17,021,Pana township,57485,Christian County,County
+17,021,Prairieton township,61730,Christian County,County
+17,021,Ricks township,63797,Christian County,County
+17,129,Atterberry No. 10 precinct,90270,Menard County,County
+17,107,Atlanta township,02765,Logan County,County
+17,107,Broadwell township,08485,Logan County,County
+17,011,Arispie township,02076,Bureau County,County
+17,011,Berlin township,05430,Bureau County,County
+17,011,Bureau township,09668,Bureau County,County
+17,011,Clarion township,14598,Bureau County,County
+17,135,Witt township,82738,Montgomery County,County
+17,135,Zanesville township,84129,Montgomery County,County
+17,135,Bois D'Arc township,07107,Montgomery County,County
+17,135,Irving township,37751,Montgomery County,County
+17,135,Rountree township,66092,Montgomery County,County
+17,151,Eddyville No. 6 precinct,91116,Pope County,County
+17,065,Beaver Creek township,04481,Hamilton County,County
+17,145,Du Quoin No. 3 precinct,91012,Perry County,County
+17,145,Du Quoin No. 4 precinct,91013,Perry County,County
+17,145,Du Quoin No. 5 precinct,91014,Perry County,County
+17,145,Du Quoin No. 6 precinct,91015,Perry County,County
+17,053,Drummer township,20799,Ford County,County
+17,107,Chester township,13126,Logan County,County
+17,107,Corwin township,16496,Logan County,County
+17,107,Eminence township,24049,Logan County,County
+17,107,Laenna township,40624,Logan County,County
+17,021,Rosamond township,65598,Christian County,County
+17,021,South Fork township,70798,Christian County,County
+17,021,Taylorville township,74587,Christian County,County
+17,021,King township,39948,Christian County,County
+17,129,Petersburg East No. 13 precinct,92433,Menard County,County
+17,129,Petersburg North No. 14 precinct,92436,Menard County,County
+17,203,Cazenovia township,11878,Woodford County,County
+17,011,Concord township,16028,Bureau County,County
+17,011,Dover township,20539,Bureau County,County
+17,011,Greenville township,31602,Bureau County,County
+17,129,Petersburg South No. 15 precinct,92439,Menard County,County
+17,129,Rock Creek No. 12 precinct,93024,Menard County,County
+17,119,Alton township,01127,Madison County,County
+17,119,Edwardsville township,22710,Madison County,County
+17,119,Granite City township,30939,Madison County,County
+17,119,Jarvis township,38245,Madison County,County
+17,151,Golconda No. 1 precinct,91386,Pope County,County
+17,151,Golconda No. 3 precinct,91422,Pope County,County
+17,151,Webster No. 5 precinct,93654,Pope County,County
+17,203,Greene township,31355,Woodford County,County
+17,203,Linn township,43835,Woodford County,County
+17,203,Metamora township,48619,Woodford County,County
+17,203,Minonk township,49581,Woodford County,County
+17,203,Montgomery township,50231,Woodford County,County
+17,203,Olio township,55821,Woodford County,County
+17,145,Pinckneyville No. 3 precinct,92470,Perry County,County
+17,145,Du Quoin No. 7 precinct,91016,Perry County,County
+17,065,McLeansboro township,45837,Hamilton County,County
+17,065,South Crouch township,70655,Hamilton County,County
+17,145,Du Quoin No. 9 precinct,91018,Perry County,County
+17,145,Du Quoin No. 10 precinct,91019,Perry County,County
+17,145,Du Quoin No. 11 precinct,91020,Perry County,County
+17,067,Appanoose township,01621,Hancock County,County
+17,047,Albion No. 1 precinct,90039,Edwards County,County
+17,047,Albion No. 2 precinct,90041,Edwards County,County
+17,047,Albion No. 3 precinct,90044,Edwards County,County
+17,107,Lake Fork township,41144,Logan County,County
+17,107,Mount Pulaski township,51141,Logan County,County
+17,107,Sheridan township,69290,Logan County,County
+17,011,Indiantown township,37413,Bureau County,County
+17,011,La Moille township,41807,Bureau County,County
+17,011,Leepertown township,42665,Bureau County,County
+17,011,Milo township,49438,Bureau County,County
+17,067,Augusta township,02999,Hancock County,County
+17,067,Chili township,14104,Hancock County,County
+17,145,Du Quoin No. 1 precinct,91010,Perry County,County
+17,145,Swanwick precinct,93348,Perry County,County
+17,145,Willisville precinct,93762,Perry County,County
+17,145,Du Quoin No. 12 precinct,91021,Perry County,County
+17,011,Princeton township,61912,Bureau County,County
+17,065,South Twigg township,71305,Hamilton County,County
+17,065,Twigg township,76472,Hamilton County,County
+17,145,Pinckneyville No. 1 precinct,92468,Perry County,County
+17,145,Pinckneyville No. 2 precinct,92469,Perry County,County
+17,089,Plato township,60365,Kane County,County
+17,089,Rutland township,66430,Kane County,County
+17,089,Sugar Grove township,73404,Kane County,County
+17,089,Virgil township,78188,Kane County,County
+17,011,Mineral township,49529,Bureau County,County
+17,011,Neponset township,52012,Bureau County,County
+17,011,Ohio township,55392,Bureau County,County
+17,011,Selby township,68562,Bureau County,County
+17,139,Dora township,20344,Moultrie County,County
+17,145,Pinckneyville No. 4 precinct,92471,Perry County,County
+17,145,Pinckneyville No. 5 precinct,92472,Perry County,County
+17,145,Pinckneyville No. 6 precinct,92473,Perry County,County
+17,145,Pinckneyville No. 7 precinct,92474,Perry County,County
+17,139,East Nelson township,22099,Moultrie County,County
+17,139,Jonathan Creek township,38609,Moultrie County,County
+17,011,Walnut township,78539,Bureau County,County
+17,011,Westfield township,80268,Bureau County,County
+17,011,Wheatland township,81009,Bureau County,County
+17,011,Wyanet township,83635,Bureau County,County
+17,135,Audubon township,02960,Montgomery County,County
+17,135,East Fork township,21761,Montgomery County,County
+17,145,Tamaroa No. 2 precinct,93386,Perry County,County
+17,177,Ridott township,64057,Stephenson County,County
+17,071,Biggsville township,05911,Henderson County,County
+17,071,Raritan township,62861,Henderson County,County
+17,143,Hallock township,32304,Peoria County,County
+17,107,East Lincoln township,21982,Logan County,County
+17,107,Hurlbut township,36789,Logan County,County
+17,107,Oran township,56289,Logan County,County
+17,127,Georges Creek precinct,91332,Massac County,County
+17,111,Algonquin township,00698,McHenry County,County
+17,109,Lamoine township,41820,McDonough County,County
+17,109,Mound township,50738,McDonough County,County
+17,109,New Salem township,52792,McDonough County,County
+17,149,Atlas township,02791,Pike County,County
+17,149,Barry township,03974,Pike County,County
+17,109,Prairie City township,61561,McDonough County,County
+17,149,Chambersburg township,12359,Pike County,County
+17,109,Sciota township,68211,McDonough County,County
+17,109,Tennessee township,74678,McDonough County,County
+17,105,Waldo township,78409,Livingston County,County
+17,153,Mounds precinct,92196,Pulaski County,County
+17,109,Walnut Grove township,78591,McDonough County,County
+17,113,Blue Mound township,06743,McLean County,County
+17,113,Chenoa township,12944,McLean County,County
+17,149,Cincinnati township,14390,Pike County,County
+17,149,Derry township,19577,Pike County,County
+17,149,Detroit township,19694,Pike County,County
+17,149,Fairmount township,24972,Pike County,County
+17,149,Griggsville township,31784,Pike County,County
+17,149,Hadley township,32070,Pike County,County
+17,113,Cropsey township,17705,McLean County,County
+17,113,Danvers township,18550,McLean County,County
+17,113,Dawson township,18732,McLean County,County
+17,005,Mulberry Grove township,51297,Bond County,County
+17,005,Shoal Creek township,69641,Bond County,County
+17,043,Lisle township,43952,DuPage County,County
+17,043,Milton township,49451,DuPage County,County
+17,131,North Henderson township,53806,Mercer County,County
+17,043,Wayne township,79410,DuPage County,County
+17,043,York township,83947,DuPage County,County
+17,049,Banner township,03558,Effingham County,County
+17,049,West township,79891,Effingham County,County
+17,123,Lacon township,40572,Marshall County,County
+17,151,Golconda No. 2 precinct,91404,Pope County,County
+17,151,Jefferson No. 4 precinct,91746,Pope County,County
+17,055,Eastern township,21735,Franklin County,County
+17,055,Goode township,30406,Franklin County,County
+17,055,Northern township,53637,Franklin County,County
+17,047,Browns precinct,90540,Edwards County,County
+17,047,French Creek precinct,91296,Edwards County,County
+17,047,Salem No. 1 precinct,93081,Edwards County,County
+17,113,Dry Grove township,20838,McLean County,County
+17,113,Funks Grove township,28209,McLean County,County
+17,149,Hardin township,32863,Pike County,County
+17,149,Kinderhook township,39935,Pike County,County
+17,149,Newburg township,52259,Pike County,County
+17,149,New Salem township,52818,Pike County,County
+17,149,Pearl township,58356,Pike County,County
+17,149,Perry township,59169,Pike County,County
+17,141,Taylor township,74535,Ogle County,County
+17,173,Clarksburg township,14637,Shelby County,County
+17,173,Penn township,58590,Shelby County,County
+17,173,Todds Point township,75588,Shelby County,County
+17,113,Gridley township,31745,McLean County,County
+17,113,Lawndale township,42353,McLean County,County
+17,113,Lexington township,43107,McLean County,County
+17,079,Grandville township,30887,Jasper County,County
+17,079,Grove township,31888,Jasper County,County
+17,079,Hunt City township,36659,Jasper County,County
+17,123,Roberts township,64668,Marshall County,County
+17,079,North Muddy township,54001,Jasper County,County
+17,079,Ste. Marie township,66803,Jasper County,County
+17,197,Du Page township,21241,Will County,County
+17,197,Manhattan township,46370,Will County,County
+17,001,Beverly township,05742,Adams County,County
+17,001,Burton township,10019,Adams County,County
+17,129,Tallula No. 11 precinct,93366,Menard County,County
+17,159,Claremont township,14546,Richland County,County
+17,159,Decker township,18862,Richland County,County
+17,159,Denver township,19486,Richland County,County
+17,159,Noble township,53156,Richland County,County
+17,001,Camp Point township,10890,Adams County,County
+17,045,Kansas township,38999,Edgar County,County
+17,149,Flint township,26415,Pike County,County
+17,039,Nixon township,53117,De Witt County,County
+17,039,Waynesville township,79462,De Witt County,County
+17,131,Duncan township,20968,Mercer County,County
+17,113,Martin township,47215,McLean County,County
+17,113,Money Creek township,49971,McLean County,County
+17,113,Mount Hope township,50972,McLean County,County
+17,113,Old Town township,55782,McLean County,County
+17,079,South Muddy township,71084,Jasper County,County
+17,079,Wade township,78357,Jasper County,County
+17,131,Keithsburg township,39311,Mercer County,County
+17,079,Willow Hill township,82023,Jasper County,County
+17,059,Asbury township,02427,Gallatin County,County
+17,059,New Haven township,52519,Gallatin County,County
+17,169,Buena Vista township,09395,Schuyler County,County
+17,169,Woodstock township,83362,Schuyler County,County
+17,001,Columbus township,15859,Adams County,County
+17,001,Concord township,16015,Adams County,County
+17,147,Unity township,76888,Piatt County,County
+17,155,Granville township,31030,Putnam County,County
+17,155,Hennepin township,34124,Putnam County,County
+17,001,Fall Creek township,25258,Adams County,County
+17,001,Honey Creek township,35957,Adams County,County
+17,113,Randolph township,62692,McLean County,County
+17,113,Towanda township,75835,McLean County,County
+17,113,West township,79904,McLean County,County
+17,113,White Oak township,81321,McLean County,County
+17,113,Yates township,83804,McLean County,County
+17,161,Andalusia township,01439,Rock Island County,County
+17,161,Blackhawk township,06301,Rock Island County,County
+17,161,Bowling township,07549,Rock Island County,County
+17,161,Buffalo Prairie township,09512,Rock Island County,County
+17,051,Seminary township,68601,Fayette County,County
+17,051,South Hurricane township,70876,Fayette County,County
+17,051,Vandalia township,77330,Fayette County,County
+17,051,Avena township,03155,Fayette County,County
+17,051,Bear Grove township,04377,Fayette County,County
+17,051,Carson township,11501,Fayette County,County
+17,051,Loudon township,44901,Fayette County,County
+17,051,Pope township,61106,Fayette County,County
+17,161,Canoe Creek township,10955,Rock Island County,County
+17,161,Coe township,15326,Rock Island County,County
+17,161,Cordova township,16379,Rock Island County,County
+17,161,Drury township,20825,Rock Island County,County
+17,161,Moline township,49880,Rock Island County,County
+17,161,Port Byron township,61236,Rock Island County,County
+17,161,Rock Island township,65091,Rock Island County,County
+17,005,Burgess township,09694,Bond County,County
+17,005,Central township,12112,Bond County,County
+17,053,Lyman township,45252,Ford County,County
+17,031,Bloom township,06561,Cook County,County
+17,031,Chicago city,14000,Cook County,County
+17,031,Elk Grove township,23243,Cook County,County
+17,031,Leyden township,43120,Cook County,County
+17,031,Maine township,46162,Cook County,County
+17,031,Rich township,63498,Cook County,County
+17,031,River Forest township,64317,Cook County,County
+17,031,Stickney township,72689,Cook County,County
+17,031,Worth township,83531,Cook County,County
+17,161,Rural township,66300,Rock Island County,County
+17,161,South Moline township,70993,Rock Island County,County
+17,161,South Rock Island township,71201,Rock Island County,County
+17,155,Magnolia township,46123,Putnam County,County
+17,111,Alden township,00607,McHenry County,County
+17,155,Senachwine township,68627,Putnam County,County
+17,065,Crouch township,17809,Hamilton County,County
+17,065,Dahlgren township,18316,Hamilton County,County
+17,065,Flannigan township,26324,Hamilton County,County
+17,065,Mayberry township,47657,Hamilton County,County
+17,065,South Flannigan township,70785,Hamilton County,County
+17,001,Houston township,36295,Adams County,County
+17,161,Hampton township,32577,Rock Island County,County
+17,161,Zuma township,84246,Rock Island County,County
+17,137,Jacksonville No. 6 precinct,91716,Morgan County,County
+17,137,Jacksonville No. 7 precinct,91717,Morgan County,County
+17,137,Jacksonville No. 8 precinct,91718,Morgan County,County
+17,137,Jacksonville No. 9 precinct,91719,Morgan County,County
+17,137,Jacksonville No. 11 precinct,91721,Morgan County,County
+17,137,Jacksonville No. 12 precinct,91722,Morgan County,County
+17,001,Keene township,39220,Adams County,County
+17,067,Carthage township,11540,Hancock County,County
+17,067,Harmony township,32993,Hancock County,County
+17,067,Montebello township,50140,Hancock County,County
+17,067,Warsaw township,78955,Hancock County,County
+17,067,Fountain Green township,27325,Hancock County,County
+17,005,Mills township,49321,Bond County,County
+17,005,Pleasant Mound township,60586,Bond County,County
+17,193,Burnt Prairie township,09902,White County,County
+17,193,Gray township,31069,White County,County
+17,193,Indian Creek township,37231,White County,County
+17,193,Phillips township,59507,White County,County
+17,119,Chouteau township,14260,Madison County,County
+17,119,Collinsville township,15612,Madison County,County
+17,119,Foster township,27182,Madison County,County
+17,119,Moro township,50465,Madison County,County
+17,119,Nameoki township,51583,Madison County,County
+17,119,Omphghent township,56068,Madison County,County
+17,119,Saline township,67275,Madison County,County
+17,119,Venice township,77486,Madison County,County
+17,137,Literberry precinct,91926,Morgan County,County
+17,127,Jefferson precinct,91740,Massac County,County
+17,001,Liberty township,43146,Adams County,County
+17,001,Melrose township,48203,Adams County,County
+17,001,Payson township,58278,Adams County,County
+17,001,Riverside township,64408,Adams County,County
+17,001,Quincy township,62380,Adams County,County
+17,001,McKee township,45746,Adams County,County
+17,001,Northeast township,53624,Adams County,County
+17,001,Richfield township,63550,Adams County,County
+17,061,Walkerville township,78461,Greene County,County
+17,189,Covington township,17042,Washington County,County
+17,189,Hoyleton township,36360,Washington County,County
+17,189,Venedy township,77434,Washington County,County
+17,137,Waverly No. 2 precinct,93642,Morgan County,County
+17,127,Benton precinct,90396,Massac County,County
+17,127,Logan precinct,91944,Massac County,County
+17,127,Metropolis No. 1 precinct,92070,Massac County,County
+17,033,Honey Creek township,35970,Crawford County,County
+17,185,Bellmont precinct,90378,Wabash County,County
+17,185,Lick Prairie precinct,91890,Wabash County,County
+17,023,Westfield township,80294,Clark County,County
+17,165,Carrier Mills township,11404,Saline County,County
+17,165,Mountain township,50803,Saline County,County
+17,165,Stonefort township,72897,Saline County,County
+17,137,Woodson precinct,93852,Morgan County,County
+17,029,Ashmore township,02570,Coles County,County
+17,029,East Oakland township,22138,Coles County,County
+17,029,Morgan township,50400,Coles County,County
+17,163,Caseyville township,11657,St. Clair County,County
+17,163,Fayetteville township,25726,St. Clair County,County
+17,163,Mascoutah township,47436,St. Clair County,County
+17,163,O'Fallon township,55262,St. Clair County,County
+17,163,Smithton township,70265,St. Clair County,County
+17,163,Sugar Loaf township,73456,St. Clair County,County
+17,029,Pleasant Grove township,60469,Coles County,County
+17,041,Arcola township,01894,Douglas County,County
+17,063,Saratoga township,67678,Grundy County,County
+17,063,Goose Lake township,30549,Grundy County,County
+17,163,Stites township,72741,St. Clair County,County
+17,153,Karnak precinct,91800,Pulaski County,County
+17,153,Pulaski precinct,92952,Pulaski County,County
+17,153,Wetaug precinct,93744,Pulaski County,County
+17,147,Cerro Gordo township,12275,Piatt County,County
+17,147,Blue Ridge township,06808,Piatt County,County
+17,119,Helvetia township,33981,Madison County,County
+17,045,Brouilletts Creek township,08901,Edgar County,County
+17,153,America precinct,90108,Pulaski County,County
+17,153,Mound City precinct,92178,Pulaski County,County
+17,153,Olmsted precinct,92322,Pulaski County,County
+17,153,Perks precinct,92412,Pulaski County,County
+17,183,Ross township,65949,Vermilion County,County
+17,011,Fairfield township,24790,Bureau County,County
+17,045,Buck township,09213,Edgar County,County
+17,045,Edgar township,22502,Edgar County,County
+17,045,Elbridge township,22912,Edgar County,County
+17,045,Embarrass township,23958,Edgar County,County
+17,191,Big Mound township,05950,Wayne County,County
+17,191,Elm River township,23685,Wayne County,County
+17,191,Leech township,42626,Wayne County,County
+17,095,Galesburg City township,28352,Knox County,County
+17,045,Grandview township,30822,Edgar County,County
+17,045,Hunter township,36685,Edgar County,County
+17,045,Paris township,57641,Edgar County,County
+17,095,Walnut Grove township,78565,Knox County,County
+17,071,Bald Bluff township,03415,Henderson County,County
+17,045,Prairie township,61483,Edgar County,County
+17,045,Ross township,65923,Edgar County,County
+17,089,Burlington township,09772,Kane County,County
+17,089,Elgin township,23087,Kane County,County
+17,135,Fillmore Consolidated township,26094,Montgomery County,County
+17,173,Holland township,35567,Shelby County,County
+17,173,Oconee township,55145,Shelby County,County
+17,139,Lowe township,45083,Moultrie County,County
+17,033,Licking township,43315,Crawford County,County
+17,173,Big Spring township,06002,Shelby County,County
+17,173,Cold Spring township,15417,Shelby County,County
+17,173,Dry Point township,20851,Shelby County,County
+17,173,Flat Branch township,26337,Shelby County,County
+17,173,Herrick township,34345,Shelby County,County
+17,173,Lakewood township,41690,Shelby County,County
+17,163,Belleville city,04845,St. Clair County,County
+17,173,Moweaqua township,51245,Shelby County,County
+17,173,Okaw township,55457,Shelby County,County
+17,031,Evanston city,24582,Cook County,County
+17,043,Addison township,00250,DuPage County,County
+17,043,Downers Grove township,20604,DuPage County,County
+17,043,Naperville township,51635,DuPage County,County
+17,043,Winfield township,82413,DuPage County,County
+17,045,Shiloh township,69498,Edgar County,County
+17,045,Stratton township,73092,Edgar County,County
+17,045,Young America township,84064,Edgar County,County
+17,043,Chicago city,14000,DuPage County,County
+17,169,Bainbridge township,03350,Schuyler County,County
+17,169,Birmingham township,06132,Schuyler County,County
+17,161,Coal Valley township,15248,Rock Island County,County
+17,149,Pittsfield township,60235,Pike County,County
+17,149,Pleasant Hill township,60547,Pike County,County
+17,099,Adams township,00204,La Salle County,County
+17,099,Ophir township,56224,La Salle County,County
+17,149,Pleasant Vale township,60651,Pike County,County
+17,149,Ross township,65936,Pike County,County
+17,149,Spring Creek township,71617,Pike County,County
+17,133,Precinct 1,92550,Monroe County,County
+17,133,Precinct 6,92575,Monroe County,County
+17,133,Precinct 10,92595,Monroe County,County
+17,099,Richland township,63576,La Salle County,County
+17,103,Amboy township,01283,Lee County,County
+17,083,English township,24231,Jersey County,County
+17,083,Fidelity township,25973,Jersey County,County
+17,043,Bloomingdale township,06600,DuPage County,County
+17,141,Forreston township,27078,Ogle County,County
+17,169,Brooklyn township,08693,Schuyler County,County
+17,169,Browning township,08966,Schuyler County,County
+17,169,Camden township,10708,Schuyler County,County
+17,169,Frederick township,27793,Schuyler County,County
+17,169,Hickory township,34462,Schuyler County,County
+17,169,Huntsville township,36776,Schuyler County,County
+17,143,Akron township,00477,Peoria County,County
+17,143,Brimfield township,08316,Peoria County,County
+17,143,Chillicothe township,14130,Peoria County,County
+17,143,Elmwood township,23711,Peoria County,County
+17,143,Hollis township,35645,Peoria County,County
+17,143,Jubilee township,38765,Peoria County,County
+17,143,Limestone township,43523,Peoria County,County
+17,001,Clayton township,14780,Adams County,County
+17,001,Ellington township,23412,Adams County,County
+17,001,Gilmer township,29288,Adams County,County
+17,001,Lima township,43458,Adams County,County
+17,001,Mendon township,48320,Adams County,County
+17,001,Ursa township,77057,Adams County,County
+17,133,Precinct 37,92730,Monroe County,County
+17,133,Precinct 28,92685,Monroe County,County
+17,103,Bradford township,07679,Lee County,County
+17,103,Brooklyn township,08654,Lee County,County
+17,103,Harmon township,32980,Lee County,County
+17,103,Lee Center township,42613,Lee County,County
+17,169,Rushville township,66352,Schuyler County,County
+17,187,Hale township,32226,Warren County,County
+17,187,Spring Grove township,72065,Warren County,County
+17,013,Belleview precinct,90360,Calhoun County,County
+17,013,Carlin precinct,90630,Calhoun County,County
+17,013,Crater precinct,90900,Calhoun County,County
+17,013,Gilead precinct,91350,Calhoun County,County
+17,013,Hamburg precinct,91584,Calhoun County,County
+17,145,Du Quoin No. 2 precinct,91011,Perry County,County
+17,145,Beaucoup precinct,90342,Perry County,County
+17,145,Sunfield precinct,93330,Perry County,County
+17,145,Pinckneyville No. 8 precinct,92475,Perry County,County
+17,145,Tamaroa No. 1 precinct,93384,Perry County,County
+17,145,Cutler precinct,90936,Perry County,County
+17,143,Logan township,44342,Peoria County,County
+17,143,Millbrook township,49113,Peoria County,County
+17,143,Princeville township,61938,Peoria County,County
+17,143,Radnor township,62510,Peoria County,County
+17,143,Richwoods township,63771,Peoria County,County
+17,143,Rosefield township,65715,Peoria County,County
+17,143,Timber township,75289,Peoria County,County
+17,093,Lisbon township,43913,Kendall County,County
+17,097,Vernon township,77668,Lake County,County
+17,125,Mason City township,47482,Mason County,County
+17,157,Percy precinct,92394,Randolph County,County
+17,179,Sand Prairie township,67483,Tazewell County,County
+17,203,Cruger township,17861,Woodford County,County
+17,137,Jacksonville No. 10 precinct,91720,Morgan County,County
+17,103,Wyoming township,83674,Lee County,County
+17,013,Hardin precinct,91602,Calhoun County,County
+17,169,Littleton township,44069,Schuyler County,County
+17,013,Richwood precinct,92988,Calhoun County,County
+17,197,Lockport township,44238,Will County,County
+17,197,Wilton township,82244,Will County,County
+17,197,Channahon township,12483,Will County,County
+17,197,Crete township,17536,Will County,County
+17,197,Custer township,18199,Will County,County
+17,197,Florence township,26519,Will County,County
+17,197,Frankfort township,27631,Will County,County
+17,149,Martinsburg township,47241,Pike County,County
+17,143,Trivoli township,76121,Peoria County,County
+17,143,West Peoria township,80749,Peoria County,County
+17,103,Nachusa township,51557,Lee County,County
+17,111,Chemung township,12892,McHenry County,County
+17,175,Osceola township,56783,Stark County,County
+17,199,Carterville precinct,90648,Williamson County,County
+17,199,Creal Springs precinct,90918,Williamson County,County
+17,199,Herrin precinct,91620,Williamson County,County
+17,199,Stonefort precinct,93294,Williamson County,County
+17,199,Crab Orchard precinct,90882,Williamson County,County
+17,111,Dorr township,20396,McHenry County,County
+17,111,Dunham township,21111,McHenry County,County
+17,111,Grafton township,30666,McHenry County,County
+17,111,Greenwood township,31680,McHenry County,County
+17,111,Hebron township,33864,McHenry County,County
+17,191,Zif township,84194,Wayne County,County
+17,181,Jonesboro District 1 precinct,91764,Union County,County
+17,149,Levee township,43003,Pike County,County
+17,149,Montezuma township,50192,Pike County,County
+17,025,Clay City township,14728,Clay County,County
+17,105,Nebraska township,51895,Livingston County,County
+17,105,Sunbury township,73781,Livingston County,County
+17,197,Green Garden township,31394,Will County,County
+17,197,Homer township,35827,Will County,County
+17,197,Jackson township,38076,Will County,County
+17,197,Joliet township,38583,Will County,County
+17,197,Monee township,49958,Will County,County
+17,197,New Lenox township,52597,Will County,County
+17,075,Ash Grove township,02453,Iroquois County,County
+17,075,Chebanse township,12814,Iroquois County,County
+17,075,Concord township,16041,Iroquois County,County
+17,075,Danforth township,18511,Iroquois County,County
+17,075,Martinton township,47293,Iroquois County,County
+17,145,Du Quoin No. 8 precinct,91017,Perry County,County
+17,199,Corinth precinct,90846,Williamson County,County
+17,199,Southern precinct,93204,Williamson County,County
+17,199,Lake Creek precinct,91836,Williamson County,County
+17,111,McHenry township,45707,McHenry County,County
+17,111,Marengo township,46799,McHenry County,County
+17,111,Richmond township,63654,McHenry County,County
+17,035,Crooked Creek township,17640,Cumberland County,County
+17,035,Spring Point township,72143,Cumberland County,County
+17,111,Riley township,64096,McHenry County,County
+17,111,Nunda township,54495,McHenry County,County
+17,111,Seneca township,68653,McHenry County,County
+17,025,Bible Grove township,05807,Clay County,County
+17,025,Blair township,06392,Clay County,County
+17,025,Oskaloosa township,56835,Clay County,County
+17,025,Pixley township,60261,Clay County,County
+17,139,Sullivan township,73508,Moultrie County,County
+17,091,Otto township,57017,Kankakee County,County
+17,025,Songer township,70486,Clay County,County
+17,025,Stanford township,72247,Clay County,County
+17,025,Xenia township,83752,Clay County,County
+17,057,Farmington township,25544,Fulton County,County
+17,057,Harris township,33110,Fulton County,County
+17,057,Isabel township,37842,Fulton County,County
+17,057,Waterford township,79137,Fulton County,County
+17,179,Little Mackinaw township,44017,Tazewell County,County
+17,135,Butler Grove township,10175,Montgomery County,County
+17,135,Nokomis township,53182,Montgomery County,County
+17,135,North Litchfield township,53949,Montgomery County,County
+17,135,Raymond township,62978,Montgomery County,County
+17,089,Batavia township,04091,Kane County,County
+17,089,Big Rock township,05989,Kane County,County
+17,089,Blackberry township,06262,Kane County,County
+17,089,Campton township,10903,Kane County,County
+17,035,Cottonwood township,16587,Cumberland County,County
+17,035,Sumpter township,73729,Cumberland County,County
+17,035,Woodbury township,82959,Cumberland County,County
+17,035,Greenup township,31537,Cumberland County,County
+17,181,Alto Pass precinct,90090,Union County,County
+17,089,Dundee township,21046,Kane County,County
+17,089,Geneva township,28885,Kane County,County
+17,089,Hampshire township,32538,Kane County,County
+17,089,Kaneville township,38908,Kane County,County
+17,121,Centralia township,12177,Marion County,County
+17,121,Romine township,65455,Marion County,County
+17,121,Salem township,67249,Marion County,County
+17,121,Tonti township,75744,Marion County,County
+17,099,Peru township,59247,La Salle County,County
+17,099,Serena township,68692,La Salle County,County
+17,057,Deerfield township,18979,Fulton County,County
+17,099,South Ottawa township,71110,La Salle County,County
+17,099,Troy Grove township,76238,La Salle County,County
+17,099,Utica township,77096,La Salle County,County
+17,099,Wallace township,78487,La Salle County,County
+17,099,Waltham township,78682,La Salle County,County
+17,085,East Galena township,21813,Jo Daviess County,County
+17,167,Pawnee township,58187,Sangamon County,County
+17,091,Essex township,24465,Kankakee County,County
+17,091,Ganeer township,28456,Kankakee County,County
+17,091,Kankakee township,38947,Kankakee County,County
+17,091,Limestone township,43497,Kankakee County,County
+17,091,Manteno township,46513,Kankakee County,County
+17,091,Momence township,49906,Kankakee County,County
+17,091,Norton township,54352,Kankakee County,County
+17,157,Brewerville precinct,90522,Randolph County,County
+17,157,Kaskaskia precinct,91818,Randolph County,County
+17,157,Rockwood precinct,93042,Randolph County,County
+17,157,Wine Hill precinct,93834,Randolph County,County
+17,041,Bourbon township,07458,Douglas County,County
+17,171,Alsey precinct,90072,Scott County,County
+17,171,Bloomfield precinct,90468,Scott County,County
+17,171,Glasgow precinct,91368,Scott County,County
+17,171,Manchester precinct,92016,Scott County,County
+17,041,Bowdre township,07497,Douglas County,County
+17,041,Camargo township,10604,Douglas County,County
+17,041,Garrett township,28755,Douglas County,County
+17,041,Murdock township,51427,Douglas County,County
+17,041,Newman township,52636,Douglas County,County
+17,041,Sargent township,67730,Douglas County,County
+17,041,Tuscola township,76420,Douglas County,County
+17,021,Stonington township,72962,Christian County,County
+17,081,Bald Hill township,03428,Jefferson County,County
+17,081,Blissville township,06496,Jefferson County,County
+17,081,Casner township,11670,Jefferson County,County
+17,081,Dodds township,20227,Jefferson County,County
+17,081,Elk Prairie township,23334,Jefferson County,County
+17,081,Farrington township,25648,Jefferson County,County
+17,081,Field township,25986,Jefferson County,County
+17,081,Grand Prairie township,30731,Jefferson County,County
+17,171,Merritt precinct,92052,Scott County,County
+17,171,Naples-Bluffs precinct,92250,Scott County,County
+17,171,Winchester No. 1 precinct,93780,Scott County,County
+17,171,Winchester No. 2 precinct,93798,Scott County,County
+17,081,McClellan township,45512,Jefferson County,County
+17,081,Moores Prairie township,50348,Jefferson County,County
+17,081,Mount Vernon township,51193,Jefferson County,County
+17,081,Pendleton township,58564,Jefferson County,County
+17,081,Rome township,65377,Jefferson County,County
+17,081,Shiloh township,69511,Jefferson County,County
+17,081,Spring Garden township,72039,Jefferson County,County
+17,081,Webber township,79514,Jefferson County,County
+17,157,Central precinct,90702,Randolph County,County
+17,157,Coulterville precinct,90864,Randolph County,County
+17,157,Palestine precinct,92358,Randolph County,County
+17,157,Steeleville precinct,93240,Randolph County,County
+17,157,Tilden precinct,93438,Randolph County,County
+17,157,Baldwin precinct,90306,Randolph County,County
+17,157,Ellis Grove precinct,91170,Randolph County,County
+17,115,Blue Mound township,06769,Macon County,County
+17,115,Decatur township,18836,Macon County,County
+17,171,Winchester No. 3 precinct,93816,Scott County,County
+17,203,El Paso township,23750,Woodford County,County
+17,085,Menominee township,48372,Jo Daviess County,County
+17,085,Nora township,53208,Jo Daviess County,County
+17,115,Friends Creek township,27988,Macon County,County
+17,115,Harristown township,33240,Macon County,County
+17,115,Hickory Point township,34527,Macon County,County
+17,115,Long Creek township,44511,Macon County,County
+17,115,Maroa township,47085,Macon County,County
+17,115,Mount Zion township,51219,Macon County,County
+17,099,Deer Park township,19096,La Salle County,County
+17,099,Groveland township,31914,La Salle County,County
+17,099,Vermillion township,77623,La Salle County,County
+17,085,Pleasant Valley township,60664,Jo Daviess County,County
+17,085,Rawlins township,62926,Jo Daviess County,County
+17,167,Clear Lake township,14858,Sangamon County,County
+17,167,Curran township,18160,Sangamon County,County
+17,167,Gardner township,28651,Sangamon County,County
+17,141,Brookville township,08784,Ogle County,County
+17,085,Rice township,63472,Jo Daviess County,County
+17,085,Rush township,66326,Jo Daviess County,County
+17,085,Scales Mound township,67938,Jo Daviess County,County
+17,115,Niantic township,52974,Macon County,County
+17,115,Oakley township,54859,Macon County,County
+17,115,South Wheatland township,71357,Macon County,County
+17,115,Whitmore township,81464,Macon County,County
+17,085,Thompson township,75146,Jo Daviess County,County
+17,085,Wards Grove township,78799,Jo Daviess County,County
+17,085,Warren township,78864,Jo Daviess County,County
+17,085,West Galena township,80359,Jo Daviess County,County
+17,085,Woodbine township,82907,Jo Daviess County,County
+17,085,Vinegar Hill township,78084,Jo Daviess County,County
+17,181,Union precinct,93484,Union County,County
+17,059,Eagle Creek township,21449,Gallatin County,County
+17,059,Equality township,24361,Gallatin County,County
+17,059,Gold Hill township,30302,Gallatin County,County
+17,059,North Fork township,53702,Gallatin County,County
+17,017,Arenzville township,01959,Cass County,County
+17,017,Ashland township,02518,Cass County,County
+17,017,Beardstown township,04364,Cass County,County
+17,059,Omaha township,56016,Gallatin County,County
+17,059,Ridgway township,64031,Gallatin County,County
+17,059,Shawnee township,69069,Gallatin County,County
+17,137,Jacksonville No. 2 precinct,91712,Morgan County,County
+17,101,Christy township,14299,Lawrence County,County
+17,101,Lukin township,45200,Lawrence County,County
+17,017,Hagener township,32148,Cass County,County
+17,017,Newmansville township,52662,Cass County,County
+17,017,Panther Creek township,57550,Cass County,County
+17,017,Philadelphia township,59481,Cass County,County
+17,017,Virginia township,78214,Cass County,County
+17,137,Pisgah precinct,92484,Morgan County,County
+17,141,Buffalo township,09421,Ogle County,County
+17,141,Byron township,10253,Ogle County,County
+17,141,Dement township,19382,Ogle County,County
+17,141,Eagle Point township,21501,Ogle County,County
+17,141,Flagg township,26298,Ogle County,County
+17,141,Grand Detour township,30718,Ogle County,County
+17,141,Lafayette township,40650,Ogle County,County
+17,141,Leaf River township,42470,Ogle County,County
+17,141,Lincoln township,43549,Ogle County,County
+17,141,Lynnville township,45382,Ogle County,County
+17,141,Marion township,46903,Ogle County,County
+17,141,Maryland township,47358,Ogle County,County
+17,141,Monroe township,50049,Ogle County,County
+17,141,Mount Morris township,51011,Ogle County,County
+17,141,Oregon-Nashua township,56504,Ogle County,County
+17,141,Pine Rock township,59975,Ogle County,County
+17,137,Alexander precinct,90054,Morgan County,County
+17,137,Arcadia precinct,90234,Morgan County,County
+17,137,Jacksonville No. 1 precinct,91711,Morgan County,County
+17,137,Jacksonville No. 3 precinct,91713,Morgan County,County
+17,137,Jacksonville No. 4 precinct,91714,Morgan County,County
+17,141,Rockvale township,65182,Ogle County,County
+17,141,White Rock township,81399,Ogle County,County
+17,141,Woosung township,83492,Ogle County,County
+17,101,Allison township,00906,Lawrence County,County
+17,101,Russell township,66378,Lawrence County,County
+17,101,Bridgeport township,08199,Lawrence County,County
+17,037,Shabbona township,68835,DeKalb County,County
+17,037,Somonauk township,70473,DeKalb County,County
+17,181,Anna District 1 precinct,90126,Union County,County
+17,181,Anna District 2 precinct,90144,Union County,County
+17,181,Anna District 3 precinct,90162,Union County,County
+17,181,Anna District 6 precinct,90216,Union County,County
+17,175,Elmira township,23646,Stark County,County
+17,035,Neoga township,51993,Cumberland County,County
+17,035,Union township,76641,Cumberland County,County
+17,019,Ayers township,03246,Champaign County,County
+17,003,Cache precinct,90576,Alexander County,County
+17,021,Locust township,44251,Christian County,County
+17,141,Scott township,68302,Ogle County,County
+17,077,Ora township,56276,Jackson County,County
+17,037,Afton township,00386,DeKalb County,County
+17,037,Clinton township,14988,DeKalb County,County
+17,037,Cortland township,16483,DeKalb County,County
+17,037,DeKalb township,19174,DeKalb County,County
+17,011,Hall township,32265,Bureau County,County
+17,011,Macon township,45928,Bureau County,County
+17,037,Franklin township,27650,DeKalb County,County
+17,037,Genoa township,28911,DeKalb County,County
+17,037,Kingston township,40078,DeKalb County,County
+17,037,Malta township,46292,DeKalb County,County
+17,037,Mayfield township,47696,DeKalb County,County
+17,037,Milan township,48983,DeKalb County,County
+17,037,Paw Paw township,58200,DeKalb County,County
+17,037,Pierce township,59676,DeKalb County,County
+17,037,Sandwich township,67561,DeKalb County,County
+17,037,South Grove township,70837,DeKalb County,County
+17,037,Sycamore township,74236,DeKalb County,County
+17,027,Sugar Creek township,73365,Clinton County,County
+17,015,Freedom township,27832,Carroll County,County
+17,121,Foster township,27195,Marion County,County
+17,137,Waverly No. 1 precinct,93640,Morgan County,County
+17,121,Stevenson township,72598,Marion County,County
+17,113,Bloomington township,06626,McLean County,County
+17,113,Bloomington City township,06639,McLean County,County
+17,113,Cheney's Grove township,12905,McLean County,County
+17,113,Empire township,24140,McLean County,County
+17,113,Hudson township,36451,McLean County,County
+17,137,Franklin precinct,91278,Morgan County,County
+17,137,Jacksonville No. 5 precinct,91715,Morgan County,County
+17,121,Carrigan township,11436,Marion County,County
+17,121,Haines township,32187,Marion County,County
+17,121,Meacham township,47826,Marion County,County
+17,121,Raccoon township,62445,Marion County,County
+17,067,Rocky Run-Wilcox township,65240,Hancock County,County
+17,167,Cotton Hill township,16574,Sangamon County,County
+17,167,Fancy Creek township,25323,Sangamon County,County
+17,125,Crane Creek township,17250,Mason County,County
+17,125,Kilbourne township,39870,Mason County,County
+17,125,Salt Creek township,67353,Mason County,County
+17,125,Sherman township,69329,Mason County,County
+17,019,Colfax township,15482,Champaign County,County
+17,019,Compromise township,15976,Champaign County,County
+17,123,Evans township,24569,Marshall County,County
+17,019,Condit township,16080,Champaign County,County
+17,019,Crittenden township,17588,Champaign County,County
+17,019,Ogden township,55288,Champaign County,County
+17,019,Pesotum township,59286,Champaign County,County
+17,069,Rosiclare precinct,93050,Hardin County,County
+17,123,La Prairie township,42093,Marshall County,County
+17,123,Richland township,63589,Marshall County,County
+17,123,Saratoga township,67691,Marshall County,County
+17,019,Philo township,59546,Champaign County,County
+17,019,Stanton township,72273,Champaign County,County
+17,019,Tolono township,75627,Champaign County,County
+17,123,Whitefield township,81230,Marshall County,County
+17,121,Iuka township,37946,Marion County,County
+17,105,Amity township,01348,Livingston County,County
+17,105,Germanville township,29106,Livingston County,County
+17,109,Blandinsville township,06483,McDonough County,County
+17,109,Chalmers township,12333,McDonough County,County
+17,109,Emmet township,24101,McDonough County,County
+17,109,Macomb township,45902,McDonough County,County
+17,109,Macomb City township,45915,McDonough County,County
+17,019,East Bend township,21566,Champaign County,County
+17,019,Harwood township,33422,Champaign County,County
+17,019,Kerr township,39688,Champaign County,County
+17,019,Mahomet township,46149,Champaign County,County
+17,019,Newcomb township,52376,Champaign County,County
+17,019,Raymond township,62952,Champaign County,County
+17,109,Scotland township,68250,McDonough County,County
+17,023,Auburn township,02908,Clark County,County
+17,019,Sadorus township,66547,Champaign County,County
+17,019,Scott township,68289,Champaign County,County
+17,019,Sidney township,69888,Champaign County,County
+17,019,South Homer township,70863,Champaign County,County
+17,069,Rock precinct,92995,Hardin County,County
+17,115,Illini township,37023,Macon County,County
+17,019,Champaign township,12398,Champaign County,County
+17,019,Champaign City township,12411,Champaign County,County
+17,019,Cunningham township,18121,Champaign County,County
+17,195,Mount Pleasant township,51076,Whiteside County,County
+17,179,Dillon township,19941,Tazewell County,County
+17,179,Hopedale township,36139,Tazewell County,County
+17,019,Hensley township,34189,Champaign County,County
+17,019,Ludlow township,45187,Champaign County,County
+17,019,Rantoul township,62796,Champaign County,County
+17,019,St. Joseph township,66963,Champaign County,County
+17,019,Somer township,70382,Champaign County,County
+17,019,Urbana township,77018,Champaign County,County
+17,099,Bruce township,09057,La Salle County,County
+17,099,Freedom township,27845,La Salle County,County
+17,165,East Eldorado township,21709,Saline County,County
+17,165,Galatia township,28274,Saline County,County
+17,015,Woodland township,83076,Carroll County,County
+17,099,Rutland township,66456,La Salle County,County
+17,165,Harrisburg township,33149,Saline County,County
+17,003,Thebes precinct,93420,Alexander County,County
+17,117,South Palmyra township,71136,Macoupin County,County
+17,117,Cahokia township,10357,Macoupin County,County
+17,117,South Otter township,71123,Macoupin County,County
+17,117,Chesterfield township,13178,Macoupin County,County
+17,117,Gillespie township,29249,Macoupin County,County
+17,117,Dorchester township,20383,Macoupin County,County
+17,117,Barr township,03792,Macoupin County,County
+17,079,Smallwood township,70200,Jasper County,County
+17,115,Pleasant View township,60677,Macon County,County
+17,177,Lancaster township,41885,Stephenson County,County
+17,177,Silver Creek township,69953,Stephenson County,County
+17,165,Independence township,37205,Saline County,County
+17,165,Long Branch township,44485,Saline County,County
+17,165,Raleigh township,62601,Saline County,County
+17,165,Rector township,63030,Saline County,County
+17,165,Tate township,74509,Saline County,County
+17,021,Mount Auburn township,50842,Christian County,County
+17,199,Blairsville precinct,90432,Williamson County,County
+17,199,East Marion precinct,91062,Williamson County,County
+17,199,Grassy precinct,91548,Williamson County,County
+17,199,West Marion precinct,93690,Williamson County,County
+17,071,Rozetta township,66222,Henderson County,County
+17,183,Elwood township,23932,Vermilion County,County
+17,095,Galesburg township,28339,Knox County,County
+17,095,Henderson township,34020,Knox County,County
+17,095,Orange township,56315,Knox County,County
+17,129,Greenview No. 6 precinct,91566,Menard County,County
+17,129,Oakford No. 9 precinct,92286,Menard County,County
+17,129,Sandridge No. 8 precinct,93096,Menard County,County
+17,175,Essex township,24478,Stark County,County
+17,175,Goshen township,30627,Stark County,County
+17,107,Aetna township,00360,Logan County,County
+17,107,Elkhart township,23282,Logan County,County
+17,107,Orvil township,56705,Logan County,County
+17,107,Prairie Creek township,61574,Logan County,County
+17,107,West Lincoln township,80593,Logan County,County
+17,153,Grand Chain precinct,91476,Pulaski County,County
+17,153,Ullin precinct,93474,Pulaski County,County
+17,153,Villa Ridge precinct,93564,Pulaski County,County
+17,171,Exeter-Bluffs precinct,91224,Scott County,County
+17,021,May township,47631,Christian County,County
+17,015,Wysox township,83700,Carroll County,County
+17,061,Kane township,38882,Greene County,County
+17,061,Rockbridge township,64824,Greene County,County
+17,061,White Hall township,81269,Greene County,County
+17,087,Belknap precinct,90346,Johnson County,County
+17,087,Cache precinct,90594,Johnson County,County
+17,087,Goreville No. 2 precinct,91458,Johnson County,County
+17,087,Tunnel Hill precinct,93456,Johnson County,County
+17,195,Erie township,24387,Whiteside County,County
+17,195,Lyndon township,45291,Whiteside County,County
+17,175,Penn township,58603,Stark County,County
+17,175,West Jersey township,80489,Stark County,County
+17,183,Blount township,06678,Vermilion County,County
+17,183,Butler township,10162,Vermilion County,County
+17,183,Carroll township,11449,Vermilion County,County
+17,183,Catlin township,11787,Vermilion County,County
+17,195,Newton township,52857,Whiteside County,County
+17,195,Portland township,61262,Whiteside County,County
+17,181,Dongola District 1 precinct,90972,Union County,County
+17,189,Ashley township,02544,Washington County,County
+17,189,Beaucoup township,04442,Washington County,County
+17,189,Bolo township,07172,Washington County,County
+17,189,Du Bois township,20877,Washington County,County
+17,189,Irvington township,37790,Washington County,County
+17,105,Avoca township,03194,Livingston County,County
+17,105,Belle Prairie township,04780,Livingston County,County
+17,105,Broughton township,08888,Livingston County,County
+17,105,Charlotte township,12606,Livingston County,County
+17,105,Chatsworth township,12723,Livingston County,County
+17,105,Dwight township,21371,Livingston County,County
+17,073,Galva township,28443,Henry County,County
+17,157,Bremen precinct,90504,Randolph County,County
+17,157,Chester precinct,90738,Randolph County,County
+17,157,Evansville precinct,91206,Randolph County,County
+17,157,Prairie du Rocher precinct,92520,Randolph County,County
+17,157,Red Bud precinct,92970,Randolph County,County
+17,157,Ruma precinct,93060,Randolph County,County
+17,157,Sparta precinct,93222,Randolph County,County
+17,183,Danville township,18576,Vermilion County,County
+17,183,Georgetown township,28976,Vermilion County,County
+17,183,Grant township,30965,Vermilion County,County
+17,189,Johannisburg township,38453,Washington County,County
+17,189,Lively Grove township,44108,Washington County,County
+17,189,Nashville township,51713,Washington County,County
+17,189,Pilot Knob township,59858,Washington County,County
+17,189,Plum Hill township,60807,Washington County,County
+17,007,LeRoy township,42951,Boone County,County
+17,007,Manchester township,46318,Boone County,County
+17,007,Poplar Grove township,61158,Boone County,County
+17,183,Love township,44953,Vermilion County,County
+17,183,McKendree township,45772,Vermilion County,County
+17,183,Middlefork township,48775,Vermilion County,County
+17,189,Richview township,63732,Washington County,County
+17,105,Eppards Point township,24309,Livingston County,County
+17,105,Esmen township,24426,Livingston County,County
+17,007,Spring township,71578,Boone County,County
+17,015,Cherry Grove-Shannon township,12996,Carroll County,County
+17,015,Fairhaven township,24881,Carroll County,County
+17,105,Fayette township,25700,Livingston County,County
+17,105,Forrest township,27039,Livingston County,County
+17,105,Indian Grove township,37244,Livingston County,County
+17,105,Long Point township,44589,Livingston County,County
+17,105,Nevada township,52077,Livingston County,County
+17,105,Newtown township,52883,Livingston County,County
+17,105,Odell township,55184,Livingston County,County
+17,015,Mount Carroll township,50894,Carroll County,County
+17,023,Casey township,11631,Clark County,County
+17,193,Emma township,24088,White County,County
+17,193,Hawthorne township,33591,White County,County
+17,193,Mill Shoals township,49360,White County,County
+17,015,Rock Creek-Lima township,64892,Carroll County,County
+17,015,Salem township,67210,Carroll County,County
+17,015,Savanna township,67834,Carroll County,County
+17,015,Washington township,79020,Carroll County,County
+17,015,York township,83908,Carroll County,County
+17,183,Newell township,52454,Vermilion County,County
+17,183,Oakwood township,55015,Vermilion County,County
+17,183,Pilot township,59832,Vermilion County,County
+17,105,Owego township,57056,Livingston County,County
+17,105,Pike township,59780,Livingston County,County
+17,105,Pleasant Ridge township,60612,Livingston County,County
+17,105,Pontiac township,61028,Livingston County,County
+17,105,Reading township,63017,Livingston County,County
+17,105,Round Grove township,65988,Livingston County,County
+17,073,Andover township,01504,Henry County,County
+17,073,Western township,80190,Henry County,County
+17,183,Sidell township,69849,Vermilion County,County
+17,183,South Ross township,71227,Vermilion County,County
+17,051,Bowling Green township,07562,Fayette County,County
+17,051,Kaskaskia township,39116,Fayette County,County
+17,051,Sharon township,69017,Fayette County,County
+17,105,Saunemin township,67808,Livingston County,County
+17,105,Sullivan township,73482,Livingston County,County
+17,105,Union township,76680,Livingston County,County
+17,181,Balcom precinct,90288,Union County,County
+17,181,Cobden District 1 precinct,90756,Union County,County
+17,069,Cave-In-Rock precinct,90666,Hardin County,County
+17,069,McFarlan precinct,91998,Hardin County,County
+17,069,Monroe precinct,92170,Hardin County,County
+17,181,Cobden District 2 precinct,90774,Union County,County
+17,181,Dongola District 2 precinct,90990,Union County,County
+17,183,Vance township,77304,Vermilion County,County
+17,095,Cedar township,11891,Knox County,County
+17,095,Chestnut township,13217,Knox County,County
+17,095,Copley township,16275,Knox County,County
+17,095,Elba township,22879,Knox County,County
+17,095,Haw Creek township,33552,Knox County,County
+17,095,Indian Point township,37361,Knox County,County
+17,095,Knox township,40403,Knox County,County
+17,095,Maquon township,46708,Knox County,County
+17,165,Brushy township,09122,Saline County,County
+17,165,Cottage township,16535,Saline County,County
+17,115,South Macon township,70967,Macon County,County
+17,069,Stone Church precinct,93276,Hardin County,County
+17,095,Ontario township,56172,Knox County,County
+17,095,Persifer township,59221,Knox County,County
+17,095,Rio township,64161,Knox County,County
+17,095,Salem township,67223,Knox County,County
+17,095,Sparta township,71435,Knox County,County
+17,077,Bradley township,07731,Jackson County,County
+17,181,Lick Creek precinct,91872,Union County,County
+17,181,Mill Creek precinct,92142,Union County,County
+17,181,Stokes precinct,93258,Union County,County
+17,007,Belvidere township,05105,Boone County,County
+17,027,Clement township,14884,Clinton County,County
+17,007,Bonus township,07302,Boone County,County
+17,007,Boone township,07328,Boone County,County
+17,007,Caledonia township,10435,Boone County,County
+17,183,Jamaica township,38180,Vermilion County,County
+17,109,Bethel township,05638,McDonough County,County
+17,095,Truro township,76303,Knox County,County
+17,095,Victoria township,77824,Knox County,County
+17,193,Carmi township,11306,White County,County
+17,083,Elsah township,23789,Jersey County,County
+17,077,De Soto township,19629,Jackson County,County
+17,077,Fountain Bluff township,27260,Jackson County,County
+17,077,Kinkaid township,40104,Jackson County,County
+17,109,Bushnell township,10123,McDonough County,County
+17,109,Colchester township,15391,McDonough County,County
+17,109,Eldorado township,22996,McDonough County,County
+17,125,Lynchburg township,45265,Mason County,County
+17,109,Hire township,35333,McDonough County,County
+17,109,Industry township,37452,McDonough County,County
+17,129,Sugar Grove No. 5 precinct,93312,Menard County,County
+17,019,Brown township,08914,Champaign County,County
+17,005,Lagrange township,40741,Bond County,County
+17,005,Old Ripley township,55730,Bond County,County
+17,005,Tamalco township,74418,Bond County,County
+17,073,Alba township,00503,Henry County,County
+17,073,Annawan township,01582,Henry County,County
+17,073,Atkinson township,02739,Henry County,County
+17,073,Burns township,09824,Henry County,County
+17,073,Clover township,15040,Henry County,County
+17,073,Colona township,15677,Henry County,County
+17,073,Cornwall township,16444,Henry County,County
+17,073,Edford township,22476,Henry County,County
+17,073,Geneseo township,28859,Henry County,County
+17,073,Hanna township,32642,Henry County,County
+17,073,Kewanee township,39740,Henry County,County
+17,073,Loraine township,44732,Henry County,County
+17,039,Clintonia township,15014,De Witt County,County
+17,039,Creek township,17302,De Witt County,County
+17,047,Shelby No. 2 precinct,93156,Edwards County,County
+17,039,Harp township,33058,De Witt County,County
+17,073,Lynn township,45304,Henry County,County
+17,073,Munson township,51388,Henry County,County
+17,073,Osco township,56809,Henry County,County
+17,073,Oxford township,57108,Henry County,County
+17,073,Phenix township,59462,Henry County,County
+17,073,Weller township,79722,Henry County,County
+17,073,Wethersfield township,80983,Henry County,County
+17,073,Yorktown township,84012,Henry County,County
+17,197,Plainfield township,60300,Will County,County
+17,197,Reed township,63108,Will County,County
+17,197,Troy township,76212,Will County,County
+17,197,Washington township,79059,Will County,County
+17,197,Wesley township,79865,Will County,County
+17,067,Dallas City township,18433,Hancock County,County
+17,067,Nauvoo township,51804,Hancock County,County
+17,039,Texas township,74769,De Witt County,County
+17,039,Tunbridge township,76342,De Witt County,County
+17,039,Wapella township,78786,De Witt County,County
+17,067,Pilot Grove township,59845,Hancock County,County
+17,067,Pontoosuc township,61093,Hancock County,County
+17,009,Cooperstown township,16262,Brown County,County
+17,039,Wilson township,82140,De Witt County,County
+17,085,Stockton township,72793,Jo Daviess County,County
+17,027,Carlyle township,11241,Clinton County,County
+17,027,Lake township,40871,Clinton County,County
+17,173,Ash Grove township,02466,Shelby County,County
+17,143,Kickapoo township,39818,Peoria County,County
+17,143,Medina township,48099,Peoria County,County
+17,003,Cairo precinct,90612,Alexander County,County
+17,003,Tamms precinct,93402,Alexander County,County
+17,037,Squaw Grove township,72182,DeKalb County,County
+17,115,Austin township,03051,Macon County,County
+17,197,Wheatland township,81035,Will County,County
+17,197,Wilmington township,82114,Will County,County
+17,029,Charleston township,12580,Coles County,County
+17,029,Hutton township,36880,Coles County,County
+17,127,Adkins precinct,90018,Massac County,County
+17,127,East Brooklyn precinct,91026,Massac County,County
+17,123,Bennington township,05235,Marshall County,County
+17,063,Aux Sable township,03090,Grundy County,County
+17,173,Pickaway township,59663,Shelby County,County
+17,055,Benton township,05313,Franklin County,County
+17,055,Denning township,19421,Franklin County,County
+17,055,Tyrone township,76576,Franklin County,County
+17,127,Grant precinct,91494,Massac County,County
+17,127,Hillerman precinct,91638,Massac County,County
+17,159,German township,29028,Richland County,County
+17,159,Madison township,46006,Richland County,County
+17,159,Preston township,61847,Richland County,County
+17,201,Seward township,68783,Winnebago County,County
+17,181,Anna District 5 precinct,90198,Union County,County
+17,201,Shirland township,69615,Winnebago County,County
+17,123,Hopewell township,36152,Marshall County,County
+17,063,Braceville township,07653,Grundy County,County
+17,063,Erienna township,24400,Grundy County,County
+17,063,Felix township,25778,Grundy County,County
+17,063,Garfield township,28677,Grundy County,County
+17,173,Windsor township,82335,Shelby County,County
+17,127,Jackson precinct,91692,Massac County,County
+17,127,Metropolis No. 2 precinct,92088,Massac County,County
+17,127,Metropolis No. 3 precinct,92106,Massac County,County
+17,127,West Brooklyn precinct,93672,Massac County,County
+17,007,Flora township,26441,Boone County,County
+17,191,Barnhill township,03753,Wayne County,County
+17,067,Rock Creek township,64876,Hancock County,County
+17,067,St. Mary township,67054,Hancock County,County
+17,063,Goodfarm township,30432,Grundy County,County
+17,063,Greenfield township,31381,Grundy County,County
+17,063,Highland township,34657,Grundy County,County
+17,063,Maine township,46175,Grundy County,County
+17,123,Henry township,34176,Marshall County,County
+17,191,Bedford township,04559,Wayne County,County
+17,191,Berry township,05521,Wayne County,County
+17,063,Mazon township,47800,Grundy County,County
+17,127,Franklin precinct,91260,Massac County,County
+17,129,Indian Creek No. 7 precinct,91656,Menard County,County
+17,067,Sonora township,70499,Hancock County,County
+17,033,Hutsonville township,36854,Crawford County,County
+17,033,Lamotte township,41833,Crawford County,County
+17,033,Montgomery township,50205,Crawford County,County
+17,033,Robinson township,64720,Crawford County,County
+17,033,Southwest township,71344,Crawford County,County
+17,063,Wauponsee township,79345,Grundy County,County
+17,063,Morris township,50504,Grundy County,County
+17,063,Nettle Creek township,52038,Grundy County,County
+17,191,Four Mile township,27364,Wayne County,County
+17,191,Garden Hill township,28534,Wayne County,County
+17,191,Grover township,31953,Wayne County,County
+17,191,Hickory Hill township,34501,Wayne County,County
+17,063,Norman township,53286,Grundy County,County
+17,063,Vienna township,77850,Grundy County,County
+17,191,Indian Prairie township,37387,Wayne County,County
+17,123,Steuben township,72585,Marshall County,County
+17,061,Athensville township,02700,Greene County,County
+17,191,Jasper township,38258,Wayne County,County
+17,191,Keith township,39285,Wayne County,County
+17,061,Bluffdale township,06860,Greene County,County
+17,061,Linder township,43809,Greene County,County
+17,129,Irish Grove No. 4 precinct,91674,Menard County,County
+17,191,Lamard township,41755,Wayne County,County
+17,191,Massilon township,47501,Wayne County,County
+17,129,Petersburg West No. 16 precinct,92441,Menard County,County
+17,127,Lincoln precinct,91908,Massac County,County
+17,131,Eliza township,23152,Mercer County,County
+17,131,Greene township,31342,Mercer County,County
+17,203,Palestine township,57290,Woodford County,County
+17,203,Panola township,57537,Woodford County,County
+17,203,Partridge township,58018,Woodford County,County
+17,203,Spring Bay township,71611,Woodford County,County
+17,203,Worth township,83544,Woodford County,County
+17,163,St. Clair township,66729,St. Clair County,County
+17,191,Mount Erie township,50946,Wayne County,County
+17,191,Orchard township,56367,Wayne County,County
+17,191,Orel township,56510,Wayne County,County
+17,203,Roanoke township,64603,Woodford County,County
+17,191,Arrington township,02297,Wayne County,County
+17,013,Point precinct,92502,Calhoun County,County
+17,027,Meridian township,48476,Clinton County,County
+17,175,Valley township,77174,Stark County,County
+17,011,Gold township,30146,Bureau County,County
+17,177,Freeport township,27897,Stephenson County,County
+17,177,Winslow township,82556,Stephenson County,County
+17,101,Bond township,07198,Lawrence County,County
+17,101,Denison township,19395,Lawrence County,County
+17,101,Lawrence township,42379,Lawrence County,County
+17,101,Petty township,59377,Lawrence County,County
+17,177,Buckeye township,09226,Stephenson County,County
+17,177,Loran township,44758,Stephenson County,County
+17,057,Astoria township,02648,Fulton County,County
+17,057,Banner township,03584,Fulton County,County
+17,057,Bernadotte township,05469,Fulton County,County
+17,057,Buckheart township,09265,Fulton County,County
+17,103,Ashton township,02596,Lee County,County
+17,177,Rock Run township,65143,Stephenson County,County
+17,057,Canton township,11020,Fulton County,County
+17,057,Ellisville township,23542,Fulton County,County
+17,057,Fairview township,25076,Fulton County,County
+17,057,Farmers township,25427,Fulton County,County
+17,057,Joshua township,38713,Fulton County,County
+17,103,Franklin Grove township,27695,Lee County,County
+17,103,Dixon township,20175,Lee County,County
+17,103,East Grove township,21865,Lee County,County
+17,103,Hamilton township,32447,Lee County,County
+17,103,Marion township,46890,Lee County,County
+17,103,May township,47644,Lee County,County
+17,119,Godfrey village,30094,Madison County,County
+17,103,Nelson township,51960,Lee County,County
+17,103,Palmyra township,57316,Lee County,County
+17,103,South Dixon township,70694,Lee County,County
+17,103,Sublette township,73300,Lee County,County
+17,103,Viola township,78110,Lee County,County
+17,103,Willow Creek township,81971,Lee County,County
+17,197,Will township,81711,Will County,County
+17,093,Seward township,68757,Kendall County,County
+17,197,Peotone township,59065,Will County,County
+17,059,Bowlesville township,07536,Gallatin County,County
+17,201,Roscoe township,65624,Winnebago County,County
+17,201,Burritt township,09915,Winnebago County,County
+17,201,Cherry Valley township,13087,Winnebago County,County
+17,185,Coffee precinct,90792,Wabash County,County
+17,185,Lancaster precinct,91854,Wabash County,County
+17,201,Durand township,21293,Winnebago County,County
+17,201,Harlem township,32928,Winnebago County,County
+17,201,Harrison township,33188,Winnebago County,County
+17,201,Laona township,42054,Winnebago County,County
+17,201,Owen township,57069,Winnebago County,County
+17,201,Rockford township,65013,Winnebago County,County
+17,201,Rockton township,65169,Winnebago County,County
+17,201,Winnebago township,82504,Winnebago County,County
+17,085,Apple River township,01686,Jo Daviess County,County
+17,085,Berreman township,05495,Jo Daviess County,County
+17,177,Dakota township,18355,Stephenson County,County
+17,177,Erin township,24413,Stephenson County,County
+17,177,Florence township,26506,Stephenson County,County
+17,129,Fancy Prairie No. 3 precinct,91242,Menard County,County
+17,181,Jonesboro District 2 precinct,91782,Union County,County
+17,181,Anna District 4 precinct,90180,Union County,County
+17,085,Council Hill township,16639,Jo Daviess County,County
+17,085,Derinda township,19551,Jo Daviess County,County
+17,085,Dunleith township,21202,Jo Daviess County,County
+17,085,Elizabeth township,23178,Jo Daviess County,County
+17,085,Guilford township,31979,Jo Daviess County,County
+17,085,Hanover township,32720,Jo Daviess County,County
+17,177,Harlem township,32902,Stephenson County,County
+17,177,Jefferson township,38284,Stephenson County,County
+17,177,Kent township,39610,Stephenson County,County
+17,177,Oneco township,56120,Stephenson County,County
+17,177,Rock Grove township,65065,Stephenson County,County
+17,181,Jonesboro District 3 precinct,91792,Union County,County
+17,181,Anna District 7 precinct,90224,Union County,County
+17,177,Waddams township,78318,Stephenson County,County
+17,177,West Point township,80788,Stephenson County,County
+17,147,Bement township,05157,Piatt County,County
+17,185,Friendsville precinct,91314,Wabash County,County
+17,185,Mount Carmel precinct,92214,Wabash County,County
+17,113,Normal township,53247,McLean County,County
+17,117,Nilwood township,53052,Macoupin County,County
+17,185,Wabash precinct,93582,Wabash County,County
+17,185,Compton precinct,90810,Wabash County,County
+17,147,Goose Creek township,30523,Piatt County,County
+17,147,Monticello township,50257,Piatt County,County
+17,147,Sangamon township,67587,Piatt County,County
+17,147,Willow Branch township,81906,Piatt County,County
+17,071,Carman township,11280,Henderson County,County
+17,071,Gladstone township,29444,Henderson County,County
+17,071,Lomax township,44394,Henderson County,County
+17,159,Bonpas township,07289,Richland County,County
+17,159,Olney township,55925,Richland County,County
+17,039,Santa Anna township,67639,De Witt County,County
+17,071,Media township,48086,Henderson County,County
+17,071,Oquawka township,56250,Henderson County,County
+17,071,Stronghurst township,73274,Henderson County,County
+17,095,Lynn township,45330,Knox County,County
+17,009,Ripley township,64187,Brown County,County
+17,039,Barnett township,03714,De Witt County,County
+17,039,De Witt township,19785,De Witt County,County
+17,039,Rutledge township,66469,De Witt County,County
+17,141,Pine Creek township,59897,Ogle County,County
+17,071,Terre Haute township,74730,Henderson County,County
+17,161,Edgington township,22632,Rock Island County,County
+17,073,Cambridge township,10656,Henry County,County
+17,119,Alhambra township,00750,Madison County,County
+17,119,Fort Russell township,27130,Madison County,County
+17,119,Hamel township,32421,Madison County,County
+17,119,Marine township,46877,Madison County,County
+17,119,New Douglas township,52428,Madison County,County
+17,103,Reynolds township,63407,Lee County,County
+17,119,Olive township,55834,Madison County,County
+17,119,Pin Oak township,60014,Madison County,County
+17,119,St. Jacob township,66872,Madison County,County
+17,119,Wood River township,83284,Madison County,County
+17,113,Bellflower township,04910,McLean County,County
+17,113,Dale township,18381,McLean County,County
+17,113,Downs township,20656,McLean County,County
+17,119,Leef township,42652,Madison County,County
+17,045,Symmes township,74288,Edgar County,County
+17,111,Burton township,10032,McHenry County,County
+17,111,Coral township,16314,McHenry County,County
+17,111,Hartland township,33305,McHenry County,County
+17,089,Aurora township,03025,Kane County,County
+17,089,St. Charles township,66716,Kane County,County
+17,201,Pecatonica township,58421,Winnebago County,County
+17,087,Lake No. 1 precinct,91840,Johnson County,County
+17,087,Vienna No. 2 precinct,93546,Johnson County,County
+17,087,Lake No. 2 precinct,91842,Johnson County,County
+17,093,Big Grove township,05872,Kendall County,County
+17,093,Bristol township,08368,Kendall County,County
+17,093,Fox township,27416,Kendall County,County
+17,093,Little Rock township,44043,Kendall County,County
+17,087,Bloomfield precinct,90450,Johnson County,County
+17,093,Na-Au-Say township,51531,Kendall County,County
+17,143,West Peoria city,80736,Peoria County,County
+17,091,Rockville township,65195,Kankakee County,County
+17,137,South Jacksonville No. 1 precinct,93206,Morgan County,County
+17,009,Buckhorn township,09291,Brown County,County
+17,009,Elkhorn township,23308,Brown County,County
+17,087,Burnside precinct,90558,Johnson County,County
+17,087,Elvira precinct,91188,Johnson County,County
+17,087,Goreville No. 1 precinct,91440,Johnson County,County
+17,087,Grantsburg No. 1 precinct,91512,Johnson County,County
+17,091,Pembroke township,58538,Kankakee County,County
+17,091,Pilot township,59819,Kankakee County,County
+17,091,St. Anne township,66651,Kankakee County,County
+17,091,Sumner township,73690,Kankakee County,County
+17,087,Grantsburg No. 2 precinct,91530,Johnson County,County
+17,087,Ozark precinct,92340,Johnson County,County
+17,057,Kerton township,39714,Fulton County,County
+17,057,Lee township,42574,Fulton County,County
+17,057,Lewistown township,43068,Fulton County,County
+17,087,Simpson precinct,93168,Johnson County,County
+17,087,Vienna No. 1 precinct,93528,Johnson County,County
+17,087,Vienna No. 3 precinct,93552,Johnson County,County
+17,057,Liverpool township,44134,Fulton County,County
+17,113,Allin township,00893,McLean County,County
+17,113,Anchor township,01374,McLean County,County
+17,113,Arrowsmith township,02369,McLean County,County
+17,091,Aroma township,02245,Kankakee County,County
+17,091,Bourbonnais township,07484,Kankakee County,County
+17,025,Harter township,33266,Clay County,County
+17,025,Hoosier township,36087,Clay County,County
+17,025,Larkinsburg township,42158,Clay County,County
+17,057,Orion township,56588,Fulton County,County
+17,057,Pleasant township,60430,Fulton County,County
+17,057,Putman township,62276,Fulton County,County
+17,137,South Jacksonville No. 3 precinct,93210,Morgan County,County
+17,137,South Jacksonville No. 2 precinct,93208,Morgan County,County
+17,057,Union township,76667,Fulton County,County
+17,187,Coldbrook township,15404,Warren County,County
+17,187,Ellison township,23516,Warren County,County
+17,187,Floyd township,26610,Warren County,County
+17,037,Victor township,77798,DeKalb County,County
+17,187,Greenbush township,31277,Warren County,County
+17,137,Murrayville precinct,92232,Morgan County,County
+17,023,Anderson township,01465,Clark County,County
+17,023,Douglas township,20461,Clark County,County
+17,169,Oakland township,54794,Schuyler County,County
+17,075,Ashkum township,02492,Iroquois County,County
+17,075,Belmont township,05014,Iroquois County,County
+17,075,Middleport township,48814,Iroquois County,County
+17,075,Prairie Green township,61665,Iroquois County,County
+17,187,Kelly township,39396,Warren County,County
+17,187,Lenox township,42847,Warren County,County
+17,187,Monmouth township,50023,Warren County,County
+17,057,Vermont township,77655,Fulton County,County
+17,023,Orange township,56302,Clark County,County
+17,103,Alto township,01101,Lee County,County
+17,017,Bluff Springs township,06938,Cass County,County
+17,133,Precinct 2,92555,Monroe County,County
+17,133,Precinct 3,92560,Monroe County,County
+17,075,Artesia township,02401,Iroquois County,County
+17,075,Beaver township,04455,Iroquois County,County
+17,187,Swan township,74093,Warren County,County
+17,057,Woodland township,83089,Fulton County,County
+17,057,Young Hickory township,84077,Fulton County,County
+17,121,Kinmundy township,40130,Marion County,County
+17,133,Precinct 4,92565,Monroe County,County
+17,133,Precinct 5,92570,Monroe County,County
+17,121,Odin township,55223,Marion County,County
+17,133,Precinct 7,92580,Monroe County,County
+17,133,Precinct 8,92585,Monroe County,County
+17,133,Precinct 9,92590,Monroe County,County
+17,187,Roseville township,65858,Warren County,County
+17,075,Beaverville township,04520,Iroquois County,County
+17,075,Crescent township,17367,Iroquois County,County
+17,075,Douglas township,20487,Iroquois County,County
+17,075,Fountain Creek township,27286,Iroquois County,County
+17,121,Omega township,56055,Marion County,County
+17,121,Sandoval township,67457,Marion County,County
+17,121,Patoka township,58070,Marion County,County
+17,121,Alma township,00932,Marion County,County
+17,015,Elkhorn Grove township,23321,Carroll County,County
+17,133,Precinct 13,92610,Monroe County,County
+17,133,Precinct 16,92625,Monroe County,County
+17,133,Precinct 17,92630,Monroe County,County
+17,133,Precinct 18,92635,Monroe County,County
+17,133,Precinct 19,92640,Monroe County,County
+17,075,Iroquois township,37725,Iroquois County,County
+17,075,Loda township,44277,Iroquois County,County
+17,075,Lovejoy township,44979,Iroquois County,County
+17,075,Milford township,49061,Iroquois County,County
+17,133,Precinct 11,92600,Monroe County,County
+17,133,Precinct 14,92615,Monroe County,County
+17,133,Precinct 24,92665,Monroe County,County
+17,133,Precinct 27,92680,Monroe County,County
+17,133,Precinct 20,92645,Monroe County,County
+17,133,Precinct 23,92660,Monroe County,County
+17,133,Precinct 25,92670,Monroe County,County
+17,133,Precinct 26,92675,Monroe County,County
+17,133,Precinct 29,92690,Monroe County,County
+17,133,Precinct 30,92695,Monroe County,County
+17,031,Barrington township,03831,Cook County,County
+17,031,Berwyn township,05586,Cook County,County
+17,117,Staunton township,72416,Macoupin County,County
+17,203,Clayton township,14793,Woodford County,County
+17,075,Milks Grove township,49074,Iroquois County,County
+17,075,Onarga township,56094,Iroquois County,County
+17,075,Papineau township,57589,Iroquois County,County
+17,075,Pigeon Grove township,59767,Iroquois County,County
+17,075,Ridgeland township,63901,Iroquois County,County
+17,003,McClure precinct,91980,Alexander County,County
+17,003,Olive Branch precinct,92304,Alexander County,County
+17,003,Sandusky precinct,93114,Alexander County,County
+17,075,Sheldon township,69225,Iroquois County,County
+17,179,Boynton township,07627,Tazewell County,County
+17,179,Cincinnati township,14403,Tazewell County,County
+17,179,Deer Creek township,18953,Tazewell County,County
+17,195,Genesee township,28833,Whiteside County,County
+17,195,Hahnaman township,32174,Whiteside County,County
+17,195,Hopkins township,36178,Whiteside County,County
+17,195,Hume township,36581,Whiteside County,County
+17,179,Delavan township,19239,Tazewell County,County
+17,179,Elm Grove township,23607,Tazewell County,County
+17,179,Fondulac township,26636,Tazewell County,County
+17,195,Montmorency township,50270,Whiteside County,County
+17,133,Precinct 31,92700,Monroe County,County
+17,133,Precinct 32,92705,Monroe County,County
+17,133,Precinct 33,92710,Monroe County,County
+17,133,Precinct 34,92715,Monroe County,County
+17,133,Precinct 35,92720,Monroe County,County
+17,133,Precinct 36,92725,Monroe County,County
+17,031,Calumet township,10474,Cook County,County
+17,031,Cicero township,14364,Cook County,County
+17,031,Lemont township,42808,Cook County,County
+17,031,New Trier township,52909,Cook County,County
+17,193,Enfield township,24192,White County,County
+17,193,Heralds Prairie township,34228,White County,County
+17,083,Richwood township,63745,Jersey County,County
+17,083,Jersey township,38401,Jersey County,County
+17,083,Mississippi township,49672,Jersey County,County
+17,083,Otter Creek township,56952,Jersey County,County
+17,083,Piasa township,59598,Jersey County,County
+17,083,Quarry township,62354,Jersey County,County
+17,083,Rosedale township,65689,Jersey County,County
+17,077,Levan township,42990,Jackson County,County
+17,077,Murphysboro township,51466,Jackson County,County
+17,133,Precinct 21,92650,Monroe County,County
+17,077,Sand Ridge township,67522,Jackson County,County
+17,179,Groveland township,31940,Tazewell County,County
+17,179,Hittle township,35359,Tazewell County,County
+17,179,Mackinaw township,45792,Tazewell County,County
+17,011,Manlius township,46435,Bureau County,County
+17,179,Malone township,46266,Tazewell County,County
+17,179,Morton township,50634,Tazewell County,County
+17,179,Pekin township,58460,Tazewell County,County
+17,105,Rooks Creek township,65520,Livingston County,County
+17,125,Bath township,04169,Mason County,County
+17,077,Vergennes township,77538,Jackson County,County
+17,077,Grand Tower township,30783,Jackson County,County
+17,077,Pomona township,60963,Jackson County,County
+17,065,Crook township,17627,Hamilton County,County
+17,065,Knight Prairie township,40299,Hamilton County,County
+17,133,Precinct 15,92620,Monroe County,County
+17,133,Precinct 22,92655,Monroe County,County
+17,031,County subdivisions not defined,00000,Cook County,County
+17,031,Bremen township,07939,Cook County,County
+17,031,Hanover township,32694,Cook County,County
+17,031,Niles township,53013,Cook County,County
+17,031,Proviso township,62133,Cook County,County
+17,031,Thornton township,75198,Cook County,County
+17,031,Northfield township,53676,Cook County,County
+17,031,Norwood Park township,54430,Cook County,County
+17,031,Oak Park township,54898,Cook County,County
+17,031,Orland township,56614,Cook County,County
+17,051,Hurricane township,36802,Fayette County,County
+17,051,La Clede township,40533,Fayette County,County
+17,051,Lone Grove township,44459,Fayette County,County
+17,051,Otego township,56913,Fayette County,County
+17,051,Shafter township,68926,Fayette County,County
+17,051,Wheatland township,81022,Fayette County,County
+17,051,Wilberton township,81568,Fayette County,County
+17,077,Somerset township,70408,Jackson County,County
+17,179,Spring Lake township,72130,Tazewell County,County
+17,179,Tremont township,75978,Tazewell County,County
+17,179,Washington township,79046,Tazewell County,County
+17,175,Toulon township,75796,Stark County,County
+17,031,Palatine township,57238,Cook County,County
+17,031,Palos township,57355,Cook County,County
+17,031,Riverside township,64434,Cook County,County
+17,031,Schaumburg township,68016,Cook County,County
+17,117,Bunker Hill township,09590,Macoupin County,County
+17,117,Brighton township,08277,Macoupin County,County
+17,195,Albany township,00529,Whiteside County,County
+17,051,Ramsey township,62640,Fayette County,County
+17,051,Sefton township,68549,Fayette County,County
+17,189,Okawville township,55483,Washington County,County
+17,189,Oakdale township,54599,Washington County,County
+17,195,Coloma township,15651,Whiteside County,County
+17,195,Fenton township,25817,Whiteside County,County
+17,195,Fulton township,28157,Whiteside County,County
+17,195,Garden Plain township,28586,Whiteside County,County
+17,099,Allen township,00763,La Salle County,County
+17,099,Brookfield township,08583,La Salle County,County
+17,099,Dayton township,18784,La Salle County,County
+17,031,Lyons township,45447,Cook County,County
+17,031,Wheeling township,81100,Cook County,County
+17,117,Bird township,06067,Macoupin County,County
+17,117,Brushy Mound township,09135,Macoupin County,County
+17,079,Fox township,27390,Jasper County,County
+17,099,Dimmick township,19980,La Salle County,County
+17,099,Eagle township,21436,La Salle County,County
+17,099,Earl township,21527,La Salle County,County
+17,099,Eden township,22424,La Salle County,County
+17,099,Fall River township,25284,La Salle County,County
+17,099,Farm Ridge township,25583,La Salle County,County
+17,099,Grand Rapids township,30744,La Salle County,County
+17,117,Carlinville township,11209,Macoupin County,County
+17,117,Girard township,29405,Macoupin County,County
+17,117,Hillyard township,35242,Macoupin County,County
+17,117,Honey Point township,35996,Macoupin County,County
+17,195,Ustick township,77070,Whiteside County,County
+17,077,Elk township,23217,Jackson County,County
+17,125,Allens Grove township,00844,Mason County,County
+17,099,Hope township,36100,La Salle County,County
+17,099,LaSalle township,42197,La Salle County,County
+17,099,Manlius township,46448,La Salle County,County
+17,099,Mendota township,48346,La Salle County,County
+17,099,Meriden township,48463,La Salle County,County
+17,099,Miller township,49204,La Salle County,County
+17,117,Mount Olive township,51037,Macoupin County,County
+17,117,North Otter township,54040,Macoupin County,County
+17,125,Forest City township,26766,Mason County,County
+17,125,Havana township,33526,Mason County,County
+17,125,Manito township,46396,Mason County,County
+17,125,Pennsylvania township,58629,Mason County,County
+17,125,Quiver township,62419,Mason County,County
+17,117,North Palmyra township,54053,Macoupin County,County
+17,117,Polk township,60924,Macoupin County,County
+17,099,Mission township,49646,La Salle County,County
+17,099,Northville township,54248,La Salle County,County
+17,099,Osage township,56731,La Salle County,County
+17,099,Ottawa township,56939,La Salle County,County
+17,099,Otter Creek township,56965,La Salle County,County
+17,117,Scottville township,68419,Macoupin County,County
+17,117,Shaws Point township,69121,Macoupin County,County
+17,117,Shipman township,69576,Macoupin County,County
+17,117,Virden township,78162,Macoupin County,County
+17,131,Abington township,00126,Mercer County,County
+17,117,Western Mound township,80229,Macoupin County,County
+17,195,Prophetstown township,61990,Whiteside County,County
+17,195,Sterling township,72553,Whiteside County,County
+17,195,Tampico township,74483,Whiteside County,County
+17,195,Union Grove township,76758,Whiteside County,County
+17,097,Moraine township,50364,Lake County,County
+17,097,Warren township,78877,Lake County,County
+17,097,Zion township,84233,Lake County,County
+17,163,Centreville township,12210,St. Clair County,County
+17,163,Shiloh Valley township,69550,St. Clair County,County
+17,163,Stookey township,72988,St. Clair County,County
+17,163,Millstadt township,49399,St. Clair County,County
+17,137,Lynnville-Markham precinct,91965,Morgan County,County
+17,137,Meredosia precinct,92041,Morgan County,County
+17,137,Chapin-Concord precinct,90725,Morgan County,County

@@ -1,6 +1,7 @@
 import geopandas as gpd
 import pandas as pd
 import folium
+from folium import FeatureGroup  # Add this import
 import glob
 import logging
 import os
@@ -29,6 +30,7 @@ def create_folium_map(shapefile_directory, processed_csv_path, output_html='stat
         initial_zoom_level = 7
         initial_location = [40.0, -89.0]  # Latitude, Longitude
         m = folium.Map(location=initial_location, zoom_start=initial_zoom_level)
+        feature_group = FeatureGroup(name='Illinois').add_to(m)
         
         folium.GeoJson(
             merged_gdf,
@@ -42,7 +44,10 @@ def create_folium_map(shapefile_directory, processed_csv_path, output_html='stat
                 aliases=['Township Name:', 'FIPS Code:', 'Label:'],
                 localize=True
             )
-        ).add_to(m)
+        ).add_to(feature_group)
+
+        # Automatically adjust the map to fit the bounds of the feature group
+        m.fit_bounds(feature_group.get_bounds())
 
         m.save(output_html)
         logging.info(f"Map with highlighted townships saved to {output_html}")

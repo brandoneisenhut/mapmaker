@@ -2,6 +2,38 @@
 <html>
 <head>
     <title>Map Display with Upload</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+                #facts-table {
+            width: 100%; /* Adjust the width as necessary */
+            border-collapse: collapse; /* Collapse borders */
+        }
+        #data-table-container {
+            max-height: 800px; /* Adjust based on your preference */
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Hide horizontal scroll */
+        }
+        #facts-table, #facts-table th, #facts-table td {
+            border: 1px solid black; /* Add border to the table, th, and td elements */
+        }
+        #facts-table th, #facts-table td {
+            text-align: center; /* Center-align the text */
+            padding: 8px; /* Add some padding for aesthetics */
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        #mapFrame {
+            flex: 1; /* Allows the map to grow and fill the available space */
+            margin-right: 20px; /* Adds some space between the map and the table */
+        }
+        #data-table {
+            flex: 1; /* Allows the table to grow and fill the available space */
+            overflow-x: auto; /* Adds horizontal scrolling to the table if it's too wide */
+        }
+    </style>
 </head>
 <body>
     <h1>Upload CSV and View Map</h1>
@@ -10,6 +42,135 @@
         <input type="file" name="file">
         <input type="submit" value="Upload">
     </form>
-    <!-- Embed the map HTML using an iframe. Adjust width and height as needed. -->
-    <iframe src="{{ url_for('serve_map') }}" width="800" height="900" frameborder="0"></iframe></body>
+
+    <div class="content">
+        <!-- Embed the map HTML using an iframe. Adjust width and height as needed. -->
+        <iframe id="mapFrame" src="{{ url_for('serve_map') }}" width="400" height="900" frameborder="0"></iframe>
+        
+        <div id="data-table-container">
+            <!-- Place this button where it makes sense in your layout -->
+<button id="regenerateMap">Regenerate Map</button>
+            <input type="text" id="filterInput" placeholder="Filter..." value="{{ search_query }}">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th><a href="?page=1&sort=NAMELSAD&direction={{ 'asc' if sort_by != 'NAMELSAD' or sort_direction == 'desc' else 'desc' }}">NAMELSAD</a></th>
+                        <th><a href="?page=1&sort=Place Name&direction={{ 'asc' if sort_by != 'Place Name' or sort_direction == 'desc' else 'desc' }}">Place Name</a></th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row['NAMELSAD'] }}</td>
+                        <td>{{ row['Place Name'] }}</td>
+                        <td>
+                            <select class="label-select" data-row-id="{{ row['COUSUBFP'] }}">
+                                <option value="nan" {% if row['Label'] == 'nan' %}selected{% endif %}>nan</option>
+                                <option value="In the Pipeline" {% if row['Label'] == 'In the Pipeline' %}selected{% endif %}>In the Pipeline</option>
+                                <option value="Current Clients" {% if row['Label'] == 'Current Clients' %}selected{% endif %}>Current Client</option>
+                            </select>
+                        </td>
+                        <td><button class="save-btn" data-row-id="{{ row['COUSUBFP'] }}">Save</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div>
+                <!-- Previous Button -->
+                {% if page > 1 %}
+                <a href="?page={{ page - 1 }}&sort={{ sort_by }}&direction={{ sort_direction }}">Previous</a>
+                {% else %}
+                <span>Previous</span>
+                {% endif %}
+
+                <!-- Next Button -->
+                {% if page < total_pages %}
+                <a href="?page={{ page + 1 }}&sort={{ sort_by }}&direction={{ sort_direction }}">Next</a>
+                {% else %}
+                <span>Next</span>
+                {% endif %}
+            </div>
+            
+</table> <!-- This is the closing tag of your existing data table -->
+
+<div id="facts-table-container">
+    <table id="facts-table">
+        <thead>
+            <tr>
+                <th>Fact</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>In the Pipeline Count</td>
+                <td>{{ pipeline_count }}</td>
+            </tr>
+            <tr>
+                <td>Current Client Count</td>
+                <td>{{ client_count }}</td>
+            </tr>
+            <tr>
+                <td>NaN Count</td>
+                <td>{{ nan_count }}</td>
+            </tr>
+            <tr>
+                <td>Last Updated</td>
+                <td>{{ last_updated }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#filterInput").on("keyup", function() {
+                var value = $(this).val();
+                // Redirect to the same page with the search query
+                window.location.href = `?search=${encodeURIComponent(value)}`;
+            });
+        });
+        </script>
+    <script>
+$(document).ready(function() {
+    $('.save-btn').click(function() {
+        var cousubfp = $(this).data('row-id'); // This now holds the COUSUBFP value
+        console.log(cousubfp); // Debugging: Log the COUSUBFP to ensure it's being retrieved correctly
+        var selectedLabel = $(`.label-select[data-row-id='${cousubfp}']`).val();
+        
+        // Proceed with the AJAX request
+        $.ajax({
+            url: '/save-label',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ cousubfp: cousubfp, label: selectedLabel }), // Send COUSUBFP as part of the request
+            success: function(response) {
+                console.log('Label saved successfully');
+            },
+            error: function(error) {
+                console.log('Error saving label');
+            }
+        });
+    });
+});
+        </script>
+        <script>
+            document.getElementById('regenerateMap').addEventListener('click', function() {
+                // Send a request to the Flask route
+                fetch('/regenerate-map')
+                    .then(response => {
+                        if (response.ok) {
+                            // If the map was regenerated successfully, reload the page to show the new map
+                            window.location.reload();
+                        } else {
+                            alert('Failed to regenerate the map.');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+            </script>
+</body>
 </html>
