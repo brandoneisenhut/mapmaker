@@ -36,12 +36,8 @@
     </style>
 </head>
 <body>
-    <h1>Upload CSV and View Map</h1>
-    <!-- File Upload Form -->
-    <form action="/" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-    </form>
+    <h1>Surus Illinois Township Coverage</h1>
+
 
     <div class="content">
         <!-- Embed the map HTML using an iframe. Adjust width and height as needed. -->
@@ -55,8 +51,8 @@
             <table id="data-table">
                 <thead>
                     <tr>
-                        <th><a href="?page=1&sort=NAMELSAD&direction={{ 'asc' if sort_by != 'NAMELSAD' or sort_direction == 'desc' else 'desc' }}">NAMELSAD</a></th>
-                        <th><a href="?page=1&sort=Place Name&direction={{ 'asc' if sort_by != 'Place Name' or sort_direction == 'desc' else 'desc' }}">Place Name</a></th>
+                        <th>Township</th>
+                        <th>County</th>
                         <th>Label</th>
                     </tr>
                 </thead>
