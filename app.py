@@ -2,7 +2,6 @@ from flask import Flask, request, send_file, jsonify, render_template, redirect,
 import os
 import pandas as pd
 from werkzeug.utils import secure_filename
-from fips_conversion import process_file as process_with_fips
 from newmapgen import create_folium_map_new_csv
 import os
 from datetime import datetime
