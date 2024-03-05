@@ -5,22 +5,23 @@
 !.gitignore
 !app.py
 !output_map.html
-!templates/
-!templates/display_map_with_upload.html
 !newmapgen.py
 !requirements.txt
 !Procfile
 !runtime.txt
 
-# Specifically include the shapefile and Chicago directory, while ignoring other files in the same directory
-!data/COUSUB/tl_2023_17_cousub.shp
-!data/Chicago/
+# Include the templates directory and all of its subdirectories
+!templates/
+!templates/**
 
-# Ignore all other shapefiles and XML files in the data directory
+# Include the data directory, but ignore everything inside it by default
+!data/
+data/**/*
+
+# Now, exclude the ignore rule for the Chicago directory and the specific shapefile
+!data/Chicago/
+!data/COUSUB/tl_2023_17_cousub.shp
+
+# Ignore other shapefiles and XML files in the data directory
 data/**/*.shp
 data/**/*.xml
-
-# Ignore everything in the data directory except the COUSUB directory and the Chicago directory
- data/**/*
-!data/COUSUB/
-!data/Chicago/
