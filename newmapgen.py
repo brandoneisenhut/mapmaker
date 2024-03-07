@@ -5,6 +5,9 @@ from folium import FeatureGroup
 import logging
 from sqlalchemy import create_engine
 from config import DATABASE_CONFIG
+import psycopg2
+from flask import Flask, request, jsonify, render_template_string
+
 
 def generate_connection_url():
     """Generates a PostgreSQL connection URL from the database configuration."""
@@ -15,6 +18,28 @@ def generate_connection_url():
     database = DATABASE_CONFIG['database']
     connection_url = f"postgresql://{user}:{password}@{host}:{port}/{database}"
     return connection_url
+
+app = Flask(__name__)
+
+
+def save_map_to_database(name, html_content):
+    """Saves the HTML content of a map to the database."""
+    connection_url = generate_connection_url()
+    conn = psycopg2.connect(connection_url)
+    cur = conn.cursor()
+    try:
+        cur.execute("INSERT INTO html_maps (name, html_content) VALUES (%s, %s) RETURNING id;", (name, html_content))
+        map_id = cur.fetchone()[0]
+        conn.commit()
+        print(f"Map with ID {map_id} saved successfully.")  # Debug statement
+        return map_id
+    except Exception as e:
+        print(f"An error occurred while saving the map: {e}")
+        conn.rollback()
+        return None
+    finally:
+        cur.close()
+        conn.close()
 
 def fetch_data_from_database():
     """Fetches township data from the database using SQLAlchemy."""
@@ -103,7 +128,13 @@ def create_folium_map_from_db(output_html='static/output_map.html'):
     folium.LayerControl().add_to(m)
 
     m.save(output_html)
-    logging.info(f"Map with highlighted Illinois townships and Chicago wards saved to {output_html}")
+    with open(output_html, 'r') as file:
+        html_content = file.read()
+
+    # Now, call save_map_to_database with the map name and HTML content
+    map_name = "My Generated Map"  # Choose an appropriate name for your map
+    save_map_to_database(map_name, html_content)
+   # logging.info(f"Map with highlighted Illinois townships and Chicago wards saved to {output_html}")
 
 if __name__ == '__main__':
     create_folium_map_from_db(output_html='static/output_map.html')

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, redirect, url_for
+from flask import Flask, request, jsonify, render_template, redirect, url_for, render_template_string, Response
 from flask_sqlalchemy import SQLAlchemy
 import subprocess
 from datetime import datetime
@@ -6,9 +6,10 @@ from sqlalchemy import create_engine
 import pandas as pd
 import os
 from config import DATABASE_CONFIG
+import psycopg2
 import logging
 from sqlalchemy import text
-from newmapgen import create_folium_map_from_db
+from newmapgen import create_folium_map_from_db, generate_connection_url
 
 
 app = Flask(__name__)
@@ -150,6 +151,21 @@ def generate_connection_url():
 @app.route('/output-map')
 def output_map():
     return app.send_static_file('output_map.html')
+
+@app.route('/map-content/latest')
+def latest_map_content():
+    connection_url = generate_connection_url()
+    conn = psycopg2.connect(connection_url)
+    cur = conn.cursor()
+    # If using a timestamp column, replace "id" with "created_at" in the ORDER BY clause
+    cur.execute("SELECT html_content FROM html_maps ORDER BY id DESC LIMIT 1")
+    row = cur.fetchone()
+    cur.close()
+    conn.close()
+    if row:
+        return Response(row[0], mimetype='text/html')
+    else:
+        return "Map not found", 404
 
 
 
