@@ -7,7 +7,7 @@ import pandas as pd
 import os
 from config import DATABASE_CONFIG
 import logging
-from newmapgen import create_folium_map_from_db, generate_connection_url
+from newmapgen import create_folium_map_from_db, generate_connection_url, save_map_to_database
 
 
 app = Flask(__name__)
@@ -67,6 +67,7 @@ def regenerate_map():
     try:
         # Call the function from newmapgen.py that generates the map
         create_folium_map_from_db()
+        save_map_to_database()
         return jsonify({'message': 'Map regenerated successfully'}), 200
     except Exception as e:
         print(f"Error regenerating map: {e}")
