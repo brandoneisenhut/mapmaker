@@ -67,11 +67,11 @@ def regenerate_map():
     try:
         # Call the function from newmapgen.py that generates the map
         create_folium_map_from_db()
-        save_map_to_database()
         return jsonify({'message': 'Map regenerated successfully'}), 200
     except Exception as e:
         print(f"Error regenerating map: {e}")
         return jsonify({'message': 'Failed to regenerate the map'}), 500
+
 
 def calculate_counts_and_last_updated():
     # Count of 'In the Pipeline' labels
