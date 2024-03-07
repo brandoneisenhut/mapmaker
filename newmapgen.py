@@ -140,12 +140,15 @@ def create_folium_map_from_db():
     folium.LayerControl().add_to(m)
 
     html_string = m._repr_html_()
-   # custom_html = html_string.replace('width:100%;', 'width:100%;').replace('height:100%;', 'height:100%;')
-
+    custom_html = f"""
+    <div style="height: 900px; width: 600px; overflow: hidden;">
+        {html_string}
+    </div>
+    """
 
     # Now, call save_map_to_database with the map name and HTML content
     map_name = "My Generated Map"  # Choose an appropriate name for your map
-    save_map_to_database(map_name, html_string)
+    save_map_to_database(map_name, custom_html)
    # logging.info(f"Map with highlighted Illinois townships and Chicago wards saved to {output_html}")
 
 if __name__ == '__main__':
