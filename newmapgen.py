@@ -3,9 +3,8 @@ import pandas as pd
 import folium
 from folium import FeatureGroup
 import logging
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from config import DATABASE_CONFIG
-import psycopg2
 from flask import Flask, request, jsonify, render_template_string
 
 
@@ -23,23 +22,20 @@ app = Flask(__name__)
 
 
 def save_map_to_database(name, html_content):
-    """Saves the HTML content of a map to the database."""
+    """Saves the HTML content of a map to the database using SQLAlchemy."""
     connection_url = generate_connection_url()
-    conn = psycopg2.connect(connection_url)
-    cur = conn.cursor()
-    try:
-        cur.execute("INSERT INTO html_maps (name, html_content) VALUES (%s, %s) RETURNING id;", (name, html_content))
-        map_id = cur.fetchone()[0]
-        conn.commit()
-        print(f"Map with ID {map_id} saved successfully.")  # Debug statement
-        return map_id
-    except Exception as e:
-        print(f"An error occurred while saving the map: {e}")
-        conn.rollback()
-        return None
-    finally:
-        cur.close()
-        conn.close()
+    engine = create_engine(connection_url)
+    with engine.connect() as conn:
+        try:
+            result = conn.execute(text("INSERT INTO html_maps (name, html_content) VALUES (:name, :html_content) RETURNING id;"), {'name': name, 'html_content': html_content})
+            map_id = result.fetchone()[0]
+            conn.commit()
+            print(f"Map with ID {map_id} saved successfully.")  # Debug statement
+            return map_id
+        except Exception as e:
+            print(f"An error occurred while saving the map: {e}")
+            conn.rollback()
+            return None
 
 def fetch_data_from_database():
     """Fetches township data from the database using SQLAlchemy."""
