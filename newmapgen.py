@@ -21,7 +21,7 @@ def fetch_data_from_database():
     try:
         database_uri = generate_connection_url()
         engine = create_engine(database_uri)
-        query = "SELECT id, township_name, label, county_name FROM townships;"
+        query = "SELECT id, township_name, label FROM townships;"
         township_df = pd.read_sql_query(query, engine)
         return township_df
     except Exception as error:
@@ -76,8 +76,8 @@ def create_folium_map_from_db(output_html='static/output_map.html'):
             'weight': 1
         },
         tooltip=folium.GeoJsonTooltip(
-            fields=['township_name', 'county_name', 'label'],
-            aliases=['Township Name:', 'County:', 'Label:'],
+            fields=['township_name', 'id', 'label'],
+            aliases=['Township Name:', 'COUSUBFP:', 'Label:'],
         localize=True
         )
     ).add_to(feature_group_illinois)
@@ -87,10 +87,10 @@ def create_folium_map_from_db(output_html='static/output_map.html'):
     folium.GeoJson(
         chicago_gdf,
         style_function=lambda feature: {
-            'fillColor': '#FF0000' if feature['properties']['label'] == 'Current Clients' else '#929292' if feature['properties']['label'] == 'In the Pipeline' else '#0F0F0F',
+            'fillColor': '#FF0000' if feature['properties']['label'] == 'Current Clients' else '#929292' if feature['properties']['label'] == 'In the Pipeline' else '#000000',
             'color': 'black',
-            'fillOpacity': 0.5,
-            'weight': 2
+            'fillOpacity': 0.75,
+            'weight': 1
         },
         tooltip=folium.GeoJsonTooltip(
             fields=['ward', 'label'],
@@ -106,4 +106,4 @@ def create_folium_map_from_db(output_html='static/output_map.html'):
     logging.info(f"Map with highlighted Illinois townships and Chicago wards saved to {output_html}")
 
 if __name__ == '__main__':
-    create_folium_map_from_db(output_html='output_map.html')
+    create_folium_map_from_db(output_html='static/output_map.html')
