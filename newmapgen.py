@@ -1,5 +1,6 @@
 import geopandas as gpd
 import pandas as pd
+from sqlalchemy.orm import sessionmaker
 import folium
 from folium import FeatureGroup
 import logging
@@ -42,12 +43,19 @@ def fetch_data_from_database():
     try:
         database_uri = generate_connection_url()
         engine = create_engine(database_uri)
-        query = "SELECT id, township_name, label FROM townships;"
-        township_df = pd.read_sql_query(query, engine)
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        query = text("SELECT id, township_name, label FROM townships;")
+        result = session.execute(query)
+        township_df = pd.DataFrame(result.fetchall(), columns=['id', 'township_name', 'label'])
+
+        session.close()
         return township_df
     except Exception as error:
         logging.error(f"Error fetching data from database: {error}")
         return pd.DataFrame()  # Return an empty DataFrame on error
+
 
 def create_folium_map_from_db(output_html='static/output_map.html'):
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
