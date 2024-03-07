@@ -21,7 +21,6 @@ def generate_connection_url():
 
 app = Flask(__name__)
 
-
 def save_map_to_database(name, html_content):
     """Saves the HTML content of a map to the database using SQLAlchemy, 
     ensuring only the latest map is stored."""
@@ -66,8 +65,7 @@ def fetch_data_from_database():
         logging.error(f"Error fetching data from database: {error}")
         return pd.DataFrame()  # Return an empty DataFrame on error
 
-
-def create_folium_map_from_db(output_html='static/output_map.html'):
+def create_folium_map_from_db():
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
     # Directly load the specific shapefile for Illinois
@@ -141,14 +139,14 @@ def create_folium_map_from_db(output_html='static/output_map.html'):
     # Optionally, add layer control to toggle between layers
     folium.LayerControl().add_to(m)
 
-    m.save(output_html)
-    with open(output_html, 'r') as file:
-        html_content = file.read()
+    html_string = m._repr_html_()
+   # custom_html = html_string.replace('width:100%;', 'width:100%;').replace('height:100%;', 'height:100%;')
+
 
     # Now, call save_map_to_database with the map name and HTML content
     map_name = "My Generated Map"  # Choose an appropriate name for your map
-    save_map_to_database(map_name, html_content)
+    save_map_to_database(map_name, html_string)
    # logging.info(f"Map with highlighted Illinois townships and Chicago wards saved to {output_html}")
 
 if __name__ == '__main__':
-    create_folium_map_from_db(output_html='static/output_map.html')
+    create_folium_map_from_db()
