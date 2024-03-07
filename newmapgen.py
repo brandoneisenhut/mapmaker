@@ -42,9 +42,8 @@ def fetch_data_from_database():
     try:
         database_uri = generate_connection_url()
         engine = create_engine(database_uri)
-        with engine.connect() as conn:
-            query = "SELECT id, township_name, label FROM townships;"
-            township_df = pd.read_sql_query(query, conn)
+        query = "SELECT id, township_name, label FROM townships;"
+        township_df = pd.read_sql_query(query, engine)
         return township_df
     except Exception as error:
         logging.error(f"Error fetching data from database: {error}")
