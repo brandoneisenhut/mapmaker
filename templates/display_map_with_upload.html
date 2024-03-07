@@ -113,6 +113,7 @@
         <div id="controls-container">
     <div id="regenerateMap-container">
         <button id="regenerateMap">Regenerate Map</button>
+        <a href="/map-content/latest/download">Download Latest Map</a>
     </div>
     <div id="filter-search-pagination-container">
         <input type="text" id="filterInput" placeholder="Filter...">
@@ -168,7 +169,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Pipeline Projects</td>
+                <td>In the Pipeline</td>
                 <td>{{ pipeline_count }}</td>
             </tr>
             <tr>
@@ -176,20 +177,12 @@
                 <td>{{ client_count }}</td>
             </tr>
             <tr>
-                <td>Other Categories</td>
-                <td>{{ nan_count }}</td>
-            </tr>
-            <tr>
-                <td>Unique Counties</td>
+                <td>Counties</td>
                 <td>{{ unique_counties }}</td>
             </tr>
             <tr>
-                <td>Unique Townships</td>
+                <td>Townships</td>
                 <td>{{ unique_townships }}</td>
-            </tr>
-            <tr>
-                <td>Unique Labels</td>
-                <td>{{ unique_labels }}</td>
             </tr>
         </tbody>
     </table>

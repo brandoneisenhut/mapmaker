@@ -23,19 +23,29 @@ app = Flask(__name__)
 
 
 def save_map_to_database(name, html_content):
-    """Saves the HTML content of a map to the database using SQLAlchemy."""
+    """Saves the HTML content of a map to the database using SQLAlchemy, 
+    ensuring only the latest map is stored."""
     connection_url = generate_connection_url()
     engine = create_engine(connection_url)
     with engine.connect() as conn:
+        # Start a transaction
+        trans = conn.begin()
         try:
+            # Delete all existing records
+            conn.execute(text("DELETE FROM html_maps;"))
+            
+            # Insert the new map
             result = conn.execute(text("INSERT INTO html_maps (name, html_content) VALUES (:name, :html_content) RETURNING id;"), {'name': name, 'html_content': html_content})
             map_id = result.fetchone()[0]
-            conn.commit()
+            
+            # Commit the transaction
+            trans.commit()
             print(f"Map with ID {map_id} saved successfully.")  # Debug statement
             return map_id
         except Exception as e:
+            # Rollback the transaction in case of error
+            trans.rollback()
             print(f"An error occurred while saving the map: {e}")
-            conn.rollback()
             return None
 
 def fetch_data_from_database():
@@ -46,9 +56,9 @@ def fetch_data_from_database():
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        query = text("SELECT id, township_name, label FROM townships;")
+        query = text("SELECT id, township_name, label, county_name FROM townships;")
         result = session.execute(query)
-        township_df = pd.DataFrame(result.fetchall(), columns=['id', 'township_name', 'label'])
+        township_df = pd.DataFrame(result.fetchall(), columns=['id', 'township_name', 'label','county_name'])
 
         session.close()
         return township_df
@@ -105,8 +115,8 @@ def create_folium_map_from_db(output_html='static/output_map.html'):
             'weight': 1
         },
         tooltip=folium.GeoJsonTooltip(
-            fields=['township_name', 'id', 'label'],
-            aliases=['Township Name:', 'COUSUBFP:', 'Label:'],
+            fields=['township_name', 'county_name', 'label'],
+            aliases=['Township Name:', 'County:', 'Label:'],
         localize=True
         )
     ).add_to(feature_group_illinois)

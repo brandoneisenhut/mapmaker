@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, redirect, url_for, render_template_string, Response
+from flask import Flask, request, jsonify, render_template, make_response, redirect, url_for, render_template_string, Response
 from flask_sqlalchemy import SQLAlchemy
 import subprocess
 from datetime import datetime
@@ -165,8 +165,23 @@ def latest_map_content():
             return Response(row[0], mimetype='text/html')
         else:
             return "Map not found", 404
+        
+@app.route('/map-content/latest/download')
+def latest_map_content_download():
+    connection_url = generate_connection_url()
+    engine = create_engine(connection_url)
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT html_content FROM html_maps ORDER BY id DESC LIMIT 1"))
+        row = result.fetchone()
+        if row:
+            response = make_response(row[0])
+            response.headers['Content-Type'] = 'text/html'
+            response.headers['Content-Disposition'] = 'attachment; filename=map.html'
+            return response
+        else:
+            return "Map not found", 404
 
 
-
+ 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
