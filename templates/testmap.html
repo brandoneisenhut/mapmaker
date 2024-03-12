@@ -27,17 +27,14 @@
             display: flex;
             margin: 0;
             height: 100vh;
-            flex-direction: column;
         }
         #controls-and-table-container {
-            flex: 1 0 auto;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: 600px;
+            width: 200px;
         }
-        #map-container {
-    width: 100vw; /* 80% of the viewport width */
-}
 
 
         #controls-container {
@@ -294,7 +291,7 @@ $(document).ready(function() {
                         $('#loadingBarContainer').hide();
                         // Here you can also fetch and display the newly generated map
                     }
-                }, 1000); // Adjust time interval to match the estimated map generation time
+                }, 300); // Adjust time interval to match the estimated map generation time
 
                 fetch('/regenerate-map')
     .then(response => response.json())

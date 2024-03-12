@@ -8,6 +8,7 @@ import os
 from config import DATABASE_CONFIG
 import logging
 from newmapgen import create_folium_map_from_db, generate_connection_url, save_map_to_database
+import re
 
 
 app = Flask(__name__)
@@ -181,7 +182,23 @@ def latest_map_content_download():
         else:
             return "Map not found", 404
 
-
+@app.route('/test-map')
+def test_map():
+    connection_url = generate_connection_url()
+    engine = create_engine(connection_url)
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT html_content FROM html_maps ORDER BY id DESC LIMIT 1"))
+        row = result.fetchone()
+        if row:
+            html_content = row[0]
+            # Adjust the padding-bottom value to increase height. Example: 80%.
+            new_padding_bottom = "80%"  # Adjust this value as needed to make the map taller.
+            pattern = r'(style="[^"]*padding-bottom:)[^;"]*;'
+            replacement = f'\\1 {new_padding_bottom};'
+            html_content = re.sub(pattern, replacement, html_content, flags=re.IGNORECASE)
+            return Response(html_content, mimetype='text/html')
+        else:
+            return "Map not found", 404
  
 if __name__ == '__main__':
     app.run(debug=False)

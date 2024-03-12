@@ -45,6 +45,9 @@ def save_map_to_database(name, html_content):
             # Rollback the transaction in case of error
             trans.rollback()
             print(f"An error occurred while saving the map: {e}")
+            # Check if the error is related to the size of the data
+            if "value too long for type character varying" in str(e):
+                print("The HTML content is too large to be saved in the database. Consider increasing the column size or using a different storage method.")
             return None
 
 def fetch_data_from_database():
@@ -140,16 +143,15 @@ def create_folium_map_from_db():
     folium.LayerControl().add_to(m)
 
     html_string = m._repr_html_()
-    custom_html = f"""
-    <div style="height: 900px; width: 600px; overflow: hidden;">
-        {html_string}
-    </div>
-    """
+    # Adjust the map height directly in the HTML string
+    html_string = html_string.replace('height:800px;', 'height:900px;')
 
     # Now, call save_map_to_database with the map name and HTML content
     map_name = "My Generated Map"  # Choose an appropriate name for your map
-    save_map_to_database(map_name, custom_html)
+    save_map_to_database(map_name, html_string)
    # logging.info(f"Map with highlighted Illinois townships and Chicago wards saved to {output_html}")
+
+
 
 if __name__ == '__main__':
     create_folium_map_from_db()
